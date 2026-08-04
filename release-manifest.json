@@ -1,10 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "status": "candidate_pending_private_push_policy_refresh_clean_clone_and_final_approval",
+  "status": "candidate_private_remote_verified_pending_policy_refresh_and_final_approval",
   "repository_name": "rdmr-pli-stm32",
   "repository_url": "https://github.com/wzh0531/rdmr-pli-stm32",
   "repository_visibility_verified": "private",
   "repository_initial_state_verified": "empty",
+  "remote_initial_verified_commit": "1c6c3154d3654aca5789c47598a1aaa4d0603469",
   "version": "1.0.0-candidate",
   "prepared_at_local": "2026-08-04",
   "author": {
@@ -14,7 +15,7 @@
   },
   "package": {
     "released_file_count_excluding_sha256sums": 181,
-    "released_bytes_excluding_sha256sums": 11658302,
+    "released_bytes_excluding_sha256sums": 11658371,
     "approximate_size_mib_excluding_sha256sums": 11.12,
     "package_plan": "paper_workspace/delivery/package-plan__github-rdmr-pli-stm32__candidate__v1.0.0.md"
   },
@@ -49,11 +50,12 @@
     "secret_pattern_scan": "PASS",
     "citation_cff_yaml_parse": "PASS",
     "historical_phase3_whole_file_hash_gate": "FAIL_VISIBLE_PARAMETER_FINGERPRINT_MATCHES",
-    "clean_clone_test": "NOT_CHECKED",
+    "clean_clone_test": "PASS_COMMIT_1C6C3154D3654ACA5789C47598A1AAA4D0603469",
     "current_cssp_repository_preprint_policy": "NOT_CHECKED",
     "reuse_license": "PASS_MIT_AND_CC_BY_4_0",
     "frozen_ei_draft_publication": "PASS_EXCLUDED_BY_AUTHOR_DECISION",
     "repository_locator": "PASS_PRIVATE_URL_RECORDED",
+    "private_repository_push": "PASS",
     "public_github_url": "NOT_PUBLIC_PRIVATE_REPOSITORY",
     "final_author_file_list_approval": "OPEN"
   },
@@ -64,8 +66,6 @@
   },
   "release_blockers": [
     "refresh the target journal's current public-repository/preprint policy",
-    "push the verified candidate commit to the private repository",
-    "run a clean-clone verification",
     "obtain final author approval"
   ]
 }
