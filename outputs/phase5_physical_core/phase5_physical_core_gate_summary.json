@@ -1,0 +1,607 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FAIL_REQUIRED_GATES",
+  "generated_from": {
+    "physical_validation": "outputs\\phase5_physical_core\\phase5_physical_log_validation.json",
+    "physical_validation_sha256": "171064EC89D882412DD539C5D6EF519A64695A19A6101E333C220824D77BDF42",
+    "physical_firmware_manifest": "outputs\\phase5_physical_core\\phase5_physical_core_firmware_manifest.json",
+    "physical_firmware_manifest_sha256": "2A32C7EF5ABA414C3CA3056F9F065CDB9067AB744BDD8603B97819B4BD6001B7",
+    "proteus_validation": "outputs\\phase5_proteus_core\\phase5_proteus_log_validation.json",
+    "proteus_validation_sha256": "8CB5A06C792E50FBC819A8EEC2D5F6FA0D397CA9B8C5B3125F228F1793CBDC70",
+    "host_completion_manifest": "outputs\\phase4_host\\phase4_completion_manifest.json",
+    "host_completion_manifest_sha256": "DF8AD76CE195EC824BEE670A3973380C5A8A316B0D708A67B64315CEB2CBC759",
+    "physical_photo_manifest": "outputs\\phase5_physical_core\\phase5_physical_photo_evidence_manifest.json",
+    "physical_photo_manifest_sha256": "0FA4857BF8A4105D302B4B56FD43056A77D4797108EE20B2945CE98AFCA2857C"
+  },
+  "matrix": {
+    "physical_scenarios": 12,
+    "physical_cold_start_runs": 36,
+    "proteus_scenarios": 12,
+    "host_formal_runs": 7920,
+    "build_hash_errors": []
+  },
+  "physical_pair_comparisons": [
+    {
+      "a2_scenario_id": 503,
+      "a3_scenario_id": 504,
+      "condition": "F1-P0.50",
+      "tracker_calls_reduction_fraction": 0.7875,
+      "mean_cycles_reduction_fraction": 0.8034638142091789,
+      "a2_deadline_violating_blocks": 159,
+      "a3_deadline_violating_blocks": 33
+    },
+    {
+      "a2_scenario_id": 505,
+      "a3_scenario_id": 506,
+      "condition": "F2-P0.20",
+      "tracker_calls_reduction_fraction": 0.7875,
+      "mean_cycles_reduction_fraction": 0.8032979690815398,
+      "a2_deadline_violating_blocks": 159,
+      "a3_deadline_violating_blocks": 33
+    },
+    {
+      "a2_scenario_id": 507,
+      "a3_scenario_id": 508,
+      "condition": "F2-P0.50",
+      "tracker_calls_reduction_fraction": 0.75625,
+      "mean_cycles_reduction_fraction": 0.7714485271788643,
+      "a2_deadline_violating_blocks": 159,
+      "a3_deadline_violating_blocks": 38
+    },
+    {
+      "a2_scenario_id": 509,
+      "a3_scenario_id": 510,
+      "condition": "F2-P1.00",
+      "tracker_calls_reduction_fraction": 0.74375,
+      "mean_cycles_reduction_fraction": 0.7587988002603897,
+      "a2_deadline_violating_blocks": 159,
+      "a3_deadline_violating_blocks": 40
+    },
+    {
+      "a2_scenario_id": 511,
+      "a3_scenario_id": 512,
+      "condition": "F3-P0.50",
+      "tracker_calls_reduction_fraction": 0.85,
+      "mean_cycles_reduction_fraction": 0.8671035952371543,
+      "a2_deadline_violating_blocks": 159,
+      "a3_deadline_violating_blocks": 23
+    }
+  ],
+  "resource_summary": {
+    "whole_firmware_rom_bytes_min": 20460,
+    "whole_firmware_rom_bytes_max": 20468,
+    "whole_firmware_rw_bytes_min": 5904,
+    "whole_firmware_rw_bytes_max": 5904,
+    "interpretation_boundary": "Each map describes the complete unified firmware image; the small scenario-to-scenario differences are not isolated per-algorithm incremental footprints."
+  },
+  "three_level_maxima": {
+    "host_physical_output_snr_abs_difference_db": 7.541517028109013e-05,
+    "host_physical_frequency_mae_abs_difference_hz": 0.00011468436717962383,
+    "host_physical_tracker_calls_abs_difference": 0,
+    "host_physical_state_mismatches_of_160": 0,
+    "host_proteus_output_snr_abs_difference_db": 0.19934716840203137,
+    "host_proteus_frequency_mae_abs_difference_hz": 0.022335851025581388,
+    "host_proteus_tracker_calls_abs_difference": 2,
+    "host_proteus_state_mismatches_of_160": 13
+  },
+  "gates": {
+    "physical_36_runs_complete": "PASS",
+    "physical_integrity_and_numeric_faults": "PASS",
+    "physical_three_cold_start_repeatability": "PASS",
+    "firmware_hex_axf_map_hashes": "PASS",
+    "a3_mean_cycles_lower_than_a2_all_five_pairs": "PASS",
+    "a3_tracker_calls_lower_than_a2_all_five_pairs": "PASS",
+    "host_physical_output_snr_le_0.10_db": "PASS",
+    "host_physical_frequency_mae_le_0.05_hz": "PASS",
+    "host_physical_tracker_calls_difference_le_1": "PASS",
+    "host_physical_state_sequence_exact": "PASS",
+    "host_proteus_output_snr_le_0.10_db": "FAIL",
+    "host_proteus_frequency_mae_le_0.05_hz": "PASS",
+    "host_proteus_tracker_calls_difference_le_1": "FAIL",
+    "host_proteus_state_sequence_exact": "FAIL",
+    "hard_realtime_1khz_all_adaptive_scenarios": "FAIL",
+    "board_and_wiring_photos": "PASS",
+    "power_or_energy_measurement": "NOT_CHECKED"
+  },
+  "photo_evidence": {
+    "status": "COMPLETE_PHOTO_EVIDENCE",
+    "overall_gate": "PASS",
+    "photo_count": 2,
+    "open_condition": null
+  },
+  "supported_claims": [
+    "The 36-run physical on-device internal-signal matrix is complete, structurally valid, numerically finite, and repeatable across three human-confirmed cold starts.",
+    "A3 reduces tracker calls and mean measured physical MCU cycles relative to A2 in all five paired scenarios.",
+    "The deployed Rev15 images and their HEX, AXF, and MAP artifacts are hash-bound."
+  ],
+  "required_limitations": [
+    "Every tested A2/A3 physical scenario has at least one block maximum above the 72,000-cycle 1 kHz deadline.",
+    "The firmware-reported deadline counter is not authoritative because the physical images logged deadline_cycles=0; the gate uses an external 72,000-cycle threshold.",
+    "The physical board generated its test signals internally; no sensor or analog front end was tested.",
+    "No calibrated power or energy measurement was performed.",
+    "The registered photographs document a representative reconstructed setup received after the logged runs; neither JPEG contained EXIF capture-time metadata.",
+    "MAP totals describe whole unified firmware images and do not isolate the incremental footprint of A0-A3."
+  ],
+  "scenario_detail": [
+    {
+      "scenario_id": 501,
+      "host": {
+        "output_snr_db": -5.310895934667217,
+        "frequency_mae_hz": 1.0,
+        "final_tracker_calls": 0
+      },
+      "proteus": {
+        "output_snr_db": -5.310892929737426,
+        "frequency_mae_hz": 1.0,
+        "final_tracker_calls": 0,
+        "deadline_violating_blocks": 0,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": -5.31090104848529,
+        "frequency_mae_hz": 1.0,
+        "final_tracker_calls": 0,
+        "deadline_violating_blocks": 0,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 5.1138180729992655e-06,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 3.004929791217137e-06,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 8.118747864216402e-06,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 502,
+      "host": {
+        "output_snr_db": 7.862554573426435,
+        "frequency_mae_hz": 1.0,
+        "final_tracker_calls": 0
+      },
+      "proteus": {
+        "output_snr_db": 7.833911171969252,
+        "frequency_mae_hz": 1.0,
+        "final_tracker_calls": 0,
+        "deadline_violating_blocks": 0,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 7.862565171643151,
+        "frequency_mae_hz": 1.0,
+        "final_tracker_calls": 0,
+        "deadline_violating_blocks": 0,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 1.0598216716672937e-05,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.028643401457182804,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.028653999673899477,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 503,
+      "host": {
+        "output_snr_db": 14.221891869363322,
+        "frequency_mae_hz": 0.07406251132488251,
+        "final_tracker_calls": 160
+      },
+      "proteus": {
+        "output_snr_db": 14.20007813600548,
+        "frequency_mae_hz": 0.0782062499999999,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 14.221943840150537,
+        "frequency_mae_hz": 0.07411249999999994,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 5.197078721508319e-05,
+        "frequency_mae_abs_difference_hz": 4.998867511743499e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.02181373335784187,
+        "frequency_mae_abs_difference_hz": 0.004143738675117387,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.021865704145056952,
+        "frequency_mae_abs_difference_hz": 0.004093749999999952,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 504,
+      "host": {
+        "output_snr_db": 14.221892021092714,
+        "frequency_mae_hz": 0.07406256347894669,
+        "final_tracker_calls": 34
+      },
+      "proteus": {
+        "output_snr_db": 14.217226600164253,
+        "frequency_mae_hz": 0.07419374999999975,
+        "final_tracker_calls": 33,
+        "deadline_violating_blocks": 32,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 14.221943840150537,
+        "frequency_mae_hz": 0.07412499999999991,
+        "final_tracker_calls": 34,
+        "deadline_violating_blocks": 33,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 5.181905782336571e-05,
+        "frequency_mae_abs_difference_hz": 6.243652105322739e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.004665420928461117,
+        "frequency_mae_abs_difference_hz": 0.00013118652105306716,
+        "tracker_calls_abs_difference": 1,
+        "state_mismatches_of_160": 2
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.004717239986284483,
+        "frequency_mae_abs_difference_hz": 6.874999999983977e-05,
+        "tracker_calls_abs_difference": 1,
+        "state_mismatches_of_160": 2
+      }
+    },
+    {
+      "scenario_id": 505,
+      "host": {
+        "output_snr_db": 15.250367473274196,
+        "frequency_mae_hz": 0.23154041171073914,
+        "final_tracker_calls": 160
+      },
+      "proteus": {
+        "output_snr_db": 15.250399465074667,
+        "frequency_mae_hz": 0.2316437499999997,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 15.250434177580619,
+        "frequency_mae_hz": 0.2316437499999997,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 6.670430642330416e-05,
+        "frequency_mae_abs_difference_hz": 0.00010333828926056832,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 3.199180047097627e-05,
+        "frequency_mae_abs_difference_hz": 0.00010333828926056832,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 3.471250595232789e-05,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 506,
+      "host": {
+        "output_snr_db": 15.250831613001779,
+        "frequency_mae_hz": 0.22906656563282013,
+        "final_tracker_calls": 34
+      },
+      "proteus": {
+        "output_snr_db": 15.25002458493419,
+        "frequency_mae_hz": 0.23309999999999914,
+        "final_tracker_calls": 32,
+        "deadline_violating_blocks": 31,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 15.250900897147464,
+        "frequency_mae_hz": 0.22918124999999975,
+        "final_tracker_calls": 34,
+        "deadline_violating_blocks": 33,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 6.928414568463381e-05,
+        "frequency_mae_abs_difference_hz": 0.00011468436717962383,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.0008070280675891439,
+        "frequency_mae_abs_difference_hz": 0.004033434367179012,
+        "tracker_calls_abs_difference": 2,
+        "state_mismatches_of_160": 4
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.0008763122132737777,
+        "frequency_mae_abs_difference_hz": 0.003918749999999388,
+        "tracker_calls_abs_difference": 2,
+        "state_mismatches_of_160": 4
+      }
+    },
+    {
+      "scenario_id": 507,
+      "host": {
+        "output_snr_db": 9.62801111623022,
+        "frequency_mae_hz": 0.22457031905651093,
+        "final_tracker_calls": 160
+      },
+      "proteus": {
+        "output_snr_db": 9.615260114037742,
+        "frequency_mae_hz": 0.23283749999999975,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 9.628029032853794,
+        "frequency_mae_hz": 0.22464999999999985,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 1.7916623573199786e-05,
+        "frequency_mae_abs_difference_hz": 7.968094348892452e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.012751002192478822,
+        "frequency_mae_abs_difference_hz": 0.008267180943488828,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.012768918816052022,
+        "frequency_mae_abs_difference_hz": 0.008187499999999903,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 508,
+      "host": {
+        "output_snr_db": 9.62801111623022,
+        "frequency_mae_hz": 0.22457031905651093,
+        "final_tracker_calls": 39
+      },
+      "proteus": {
+        "output_snr_db": 9.626334493097485,
+        "frequency_mae_hz": 0.22473124999999966,
+        "final_tracker_calls": 37,
+        "deadline_violating_blocks": 36,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 9.628029032853794,
+        "frequency_mae_hz": 0.22464999999999985,
+        "final_tracker_calls": 39,
+        "deadline_violating_blocks": 38,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 1.7916623573199786e-05,
+        "frequency_mae_abs_difference_hz": 7.968094348892452e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.0016766231327363101,
+        "frequency_mae_abs_difference_hz": 0.00016093094348873516,
+        "tracker_calls_abs_difference": 2,
+        "state_mismatches_of_160": 4
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.00169453975630951,
+        "frequency_mae_abs_difference_hz": 8.124999999981064e-05,
+        "tracker_calls_abs_difference": 2,
+        "state_mismatches_of_160": 4
+      }
+    },
+    {
+      "scenario_id": 509,
+      "host": {
+        "output_snr_db": 4.069772005235467,
+        "frequency_mae_hz": 0.22390620410442352,
+        "final_tracker_calls": 160
+      },
+      "proteus": {
+        "output_snr_db": 4.037287526294157,
+        "frequency_mae_hz": 0.23273749999999976,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 4.069775297104076,
+        "frequency_mae_hz": 0.22399999999999984,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 3.2918686097005434e-06,
+        "frequency_mae_abs_difference_hz": 9.379589557631518e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.0324844789413099,
+        "frequency_mae_abs_difference_hz": 0.008831295895576241,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.0324877708099196,
+        "frequency_mae_abs_difference_hz": 0.008737499999999926,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 510,
+      "host": {
+        "output_snr_db": 4.0697719676823345,
+        "frequency_mae_hz": 0.2239062488079071,
+        "final_tracker_calls": 41
+      },
+      "proteus": {
+        "output_snr_db": 4.068999823251269,
+        "frequency_mae_hz": 0.22408124999999965,
+        "final_tracker_calls": 40,
+        "deadline_violating_blocks": 39,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 4.069775231735672,
+        "frequency_mae_hz": 0.2240124999999998,
+        "final_tracker_calls": 41,
+        "deadline_violating_blocks": 40,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 3.2640533378369696e-06,
+        "frequency_mae_abs_difference_hz": 0.0001062511920927045,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.0007721444310657688,
+        "frequency_mae_abs_difference_hz": 0.00017500119209254428,
+        "tracker_calls_abs_difference": 1,
+        "state_mismatches_of_160": 4
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.0007754084844036058,
+        "frequency_mae_abs_difference_hz": 6.874999999983977e-05,
+        "tracker_calls_abs_difference": 1,
+        "state_mismatches_of_160": 4
+      }
+    },
+    {
+      "scenario_id": 511,
+      "host": {
+        "output_snr_db": 15.818384631781532,
+        "frequency_mae_hz": 0.0805014818906784,
+        "final_tracker_calls": 160
+      },
+      "proteus": {
+        "output_snr_db": 15.81787218992588,
+        "frequency_mae_hz": 0.08052499999999974,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 15.818460046951813,
+        "frequency_mae_hz": 0.08052499999999974,
+        "final_tracker_calls": 160,
+        "deadline_violating_blocks": 159,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 7.541517028109013e-05,
+        "frequency_mae_abs_difference_hz": 2.3518109321329916e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.0005124418556512467,
+        "frequency_mae_abs_difference_hz": 2.3518109321329916e-05,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.0005878570259323368,
+        "frequency_mae_abs_difference_hz": 0.0,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      }
+    },
+    {
+      "scenario_id": 512,
+      "host": {
+        "output_snr_db": 15.248040848512005,
+        "frequency_mae_hz": 0.17108289897441864,
+        "final_tracker_calls": 24
+      },
+      "proteus": {
+        "output_snr_db": 15.048693680109974,
+        "frequency_mae_hz": 0.19341875000000003,
+        "final_tracker_calls": 22,
+        "deadline_violating_blocks": 21,
+        "numeric_fault_rows": 0
+      },
+      "physical": {
+        "output_snr_db": 15.248108191272468,
+        "frequency_mae_hz": 0.17108749999999945,
+        "final_tracker_calls": 24,
+        "deadline_violating_blocks": 23,
+        "numeric_fault_rows": 0
+      },
+      "host_physical": {
+        "output_snr_abs_difference_db": 6.734276046316268e-05,
+        "frequency_mae_abs_difference_hz": 4.601025580808216e-06,
+        "tracker_calls_abs_difference": 0,
+        "state_mismatches_of_160": 0
+      },
+      "host_proteus": {
+        "output_snr_abs_difference_db": 0.19934716840203137,
+        "frequency_mae_abs_difference_hz": 0.022335851025581388,
+        "tracker_calls_abs_difference": 2,
+        "state_mismatches_of_160": 13
+      },
+      "proteus_physical": {
+        "output_snr_abs_difference_db": 0.19941451116249453,
+        "frequency_mae_abs_difference_hz": 0.02233125000000058,
+        "tracker_calls_abs_difference": 2,
+        "state_mismatches_of_160": 13
+      }
+    }
+  ]
+}

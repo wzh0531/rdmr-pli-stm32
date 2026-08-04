@@ -1,0 +1,83 @@
+{
+  "schema_version": "0.3.1",
+  "base_protocol": "experiment_protocol__rdmr-pli__v0.3.0.json",
+  "base_protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "implementation_version": "0.3.1",
+  "log_schema_version": "rdmr-block-csv-v2",
+  "log_granularity": "one_row_per_50_sample_block",
+  "columns": [
+    "run_id",
+    "scenario_id",
+    "algorithm",
+    "seed",
+    "n",
+    "input",
+    "clean",
+    "output",
+    "true_frequency",
+    "estimated_frequency",
+    "estimated_frequency_next",
+    "tracker_calls",
+    "state",
+    "cycles",
+    "block_cycles_mean",
+    "block_cycles_p95",
+    "residual_ratio",
+    "desired_energy",
+    "input_error_energy",
+    "output_error_energy",
+    "numeric_flags"
+  ],
+  "estimated_frequency_semantics": {
+    "estimated_frequency_used_hz": "frequency used by the final sample represented in the row",
+    "estimated_frequency_next_hz": "frequency after any tracker update at the represented block boundary"
+  },
+  "cycle_semantics": {
+    "cycles": "maximum algorithm-only DWT cycles within the represented block",
+    "block_cycles_mean": "integer mean algorithm-only cycles within the represented block",
+    "block_cycles_p95": "Exact nearest-rank 95th percentile within each 50-sample block; run-level quantiles use a deterministic 128-sample reservoir",
+    "run_median_and_p95": "P2 streaming estimates; mean and maximum are exact"
+  },
+  "algorithm_parameters": {
+    "A0": {
+      "notch_frequency_hz": 50,
+      "quality_factor": 30,
+      "form": "normalized second-order direct-form-I IIR"
+    },
+    "A1_A3": {
+      "numeric_path": "float32",
+      "tracker": "400-point-tail-Hann Goertzel grid",
+      "oscillator": "float32 recursive rotation",
+      "residual_ratio": "sum-form matching firmware"
+    }
+  },
+  "default_build": {
+    "algorithm": "A3",
+    "trajectory": "F1",
+    "near_line": "N0",
+    "noise": "none",
+    "seed": 0,
+    "pli_amplitude": 0.5,
+    "sample_count": 8000
+  },
+  "clock": {
+    "target_core_clock_hz": 72000000,
+    "deadline_cycles": 72000,
+    "proteus_osc_frequency_hz": 9000000,
+    "proteus_clock_scale": 8
+  },
+  "uart": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1,
+    "required_markers": [
+      "BOOT",
+      "CONFIG",
+      "header",
+      "STATS",
+      "DONE"
+    ],
+    "expected_data_rows": 160
+  }
+}

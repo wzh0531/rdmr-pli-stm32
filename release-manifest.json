@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "status": "candidate_pending_private_push_policy_refresh_clean_clone_and_final_approval",
+  "repository_name": "rdmr-pli-stm32",
+  "repository_url": "https://github.com/wzh0531/rdmr-pli-stm32",
+  "repository_visibility_verified": "private",
+  "repository_initial_state_verified": "empty",
+  "version": "1.0.0-candidate",
+  "prepared_at_local": "2026-08-04",
+  "author": {
+    "name": "Zihan Wang",
+    "orcid": "0009-0004-7660-158X",
+    "affiliation": "School of Electronic and Information Engineering, Hebei University of Technology"
+  },
+  "package": {
+    "released_file_count_excluding_sha256sums": 181,
+    "released_bytes_excluding_sha256sums": 11658302,
+    "approximate_size_mib_excluding_sha256sums": 11.12,
+    "package_plan": "paper_workspace/delivery/package-plan__github-rdmr-pli-stm32__candidate__v1.0.0.md"
+  },
+  "included": [
+    "frozen protocol and machine-readable configuration",
+    "platform-independent C implementation and host runners",
+    "STM32 source, startup/linker files, and parameterized ARMCC build scripts",
+    "Python model, unit tests, analysis, statistics, and figure scripts",
+    "host per-run metrics and grouped summaries",
+    "Proteus and physical UART logs and validation summaries",
+    "final statistical outputs, figures, tables, and provenance manifests",
+    "MIT-licensed software and CC-BY-4.0-licensed data, figures, and documentation"
+  ],
+  "excluded": [
+    "regenerable Phase-4 NPZ batches (approximately 287 MiB)",
+    "compiled host and ARMCC binaries and caches",
+    "historical pre-fix Proteus packages",
+    "raw physical-setup photographs",
+    "current CSSP manuscript and internal submission-control records",
+    "frozen four-page EI working draft (private; historical records may retain only its SHA-256 identifier)"
+  ],
+  "checks": {
+    "python_unit_tests_12_of_12": "PASS",
+    "host_algorithm_alignment_364_rows": "PASS",
+    "phase6_statistics": "PASS_WITH_REPORTED_NEGATIVE_RESULTS",
+    "a3_vs_a2_snr_noninferiority": "PASS",
+    "physical_hard_realtime_1khz": "FAIL_RETAINED_AS_RESULT",
+    "phase6_figure_table_generation": "PASS_WITH_FIG2_AND_FIG6_PRESERVED",
+    "figure2_trace_batches": "PRESERVED_OUTPUT",
+    "figure6_raw_photos": "NOT_INCLUDED_RIGHTS_CLEARED_COMPOSITE_ONLY",
+    "absolute_local_path_scan": "PASS",
+    "secret_pattern_scan": "PASS",
+    "citation_cff_yaml_parse": "PASS",
+    "historical_phase3_whole_file_hash_gate": "FAIL_VISIBLE_PARAMETER_FINGERPRINT_MATCHES",
+    "clean_clone_test": "NOT_CHECKED",
+    "current_cssp_repository_preprint_policy": "NOT_CHECKED",
+    "reuse_license": "PASS_MIT_AND_CC_BY_4_0",
+    "frozen_ei_draft_publication": "PASS_EXCLUDED_BY_AUTHOR_DECISION",
+    "repository_locator": "PASS_PRIVATE_URL_RECORDED",
+    "public_github_url": "NOT_PUBLIC_PRIVATE_REPOSITORY",
+    "final_author_file_list_approval": "OPEN"
+  },
+  "frozen_hash_assertions": {
+    "protocol_sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933",
+    "ei_draft_sha256": "629A01139433FBA0E07191C64263D02EF7EDEE8CBFE237C9D1419FE630BDF287",
+    "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
+  },
+  "release_blockers": [
+    "refresh the target journal's current public-repository/preprint policy",
+    "push the verified candidate commit to the private repository",
+    "run a clean-clone verification",
+    "obtain final author approval"
+  ]
+}

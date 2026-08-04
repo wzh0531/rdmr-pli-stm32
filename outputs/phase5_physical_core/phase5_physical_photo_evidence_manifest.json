@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "status": "COMPLETE_PHOTO_EVIDENCE",
+  "protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "received_date": "2026-08-02",
+  "evidence_boundary": {
+    "representative_setup_photo": true,
+    "contemporaneous_with_36_runs": false,
+    "capture_time_verified_from_exif": false,
+    "full_wiring_path_visible": true,
+    "remote_uart_module_visible": true
+  },
+  "photos": [
+    {
+      "evidence_id": "phase5-photo-platform-closeup-20260802-001",
+      "role": "representative_platform_and_chip_closeup",
+      "source_filename": "31a66e148ea7383a9aa8b7e35a7d9512.jpg",
+      "archive_path": "outputs/phase5_physical_core/photos/PHASE5_PHYSICAL_PLATFORM_CLOSEUP_20260802.jpg",
+      "sha256": "1233D8D81F0BE6F6CA98AA55B9112CABBD1592E0C8270A73DC3D2E45BB7D3557",
+      "bytes": 236789,
+      "format": "JPEG",
+      "mode": "RGB",
+      "width_px": 1707,
+      "height_px": 1280,
+      "exif_present": false,
+      "filesystem_modified_local": "2026-08-02T18:37:24+08:00",
+      "filesystem_time_is_capture_evidence": false,
+      "visual_findings": [
+        "Blue-Pill-style STM32 development board is visible on a breadboard.",
+        "The central MCU package and board pin labels are visible; the marking is visually consistent with the declared STM32F103C8T6 platform.",
+        "Board-side jumper connections are partly visible, but the remote ends and the USB-UART module are outside the frame."
+      ],
+      "permitted_uses": [
+        "representative physical platform photograph",
+        "board and MCU close-up evidence"
+      ],
+      "prohibited_uses": [
+        "proof of the complete UART wiring path",
+        "proof that the photograph was captured during the 36 logged runs",
+        "proof of sensor or analog-front-end acquisition"
+      ]
+    },
+    {
+      "evidence_id": "phase5-photo-wiring-overview-20260802-002",
+      "role": "representative_platform_wiring_overview",
+      "source_filename": "3380a148ed7c4070f67382a30ebbb326.jpg",
+      "archive_path": "outputs/phase5_physical_core/photos/PHASE5_PHYSICAL_WIRING_OVERVIEW_20260802.jpg",
+      "sha256": "B13F16B0C8DA358CC201522AAB4AA9495366E8D8CBE730EBD99DFE3CB8396FFB",
+      "bytes": 372951,
+      "format": "JPEG",
+      "mode": "RGB",
+      "width_px": 2095,
+      "height_px": 1279,
+      "exif_present": false,
+      "filesystem_modified_local": "2026-08-02T20:11:17+08:00",
+      "filesystem_time_is_capture_evidence": false,
+      "visual_findings": [
+        "The Blue-Pill-style STM32 board, breadboard, ST-Link V2 programmer, USB-UART module, and jumper wiring are visible in one frame.",
+        "The overview complements the close-up by showing the external modules and the routing of the visible connections.",
+        "The photograph documents a representative reconstructed setup received after the logged runs; it is not claimed as a synchronized run photograph."
+      ],
+      "permitted_uses": [
+        "representative physical platform and wiring photograph",
+        "evidence that the declared programmer, UART adapter, board, and jumper wiring were available together"
+      ],
+      "prohibited_uses": [
+        "proof that the photograph was captured during the 36 logged runs",
+        "proof of electrical signal integrity or calibrated power consumption",
+        "proof of sensor or analog-front-end acquisition"
+      ]
+    }
+  ],
+  "checks": {
+    "archive_byte_identity": "PASS",
+    "platform_visible": "PASS",
+    "chip_or_board_identity_visible": "PASS_WITH_CONDITIONS",
+    "full_uart_wiring_visible": "PASS",
+    "capture_date_from_exif": "NOT_CHECKED"
+  },
+  "overall_gate": "PASS",
+  "open_condition": null,
+  "notes": [
+    "This is registered as a representative setup photograph received after the logged runs, not as a contemporaneous run photograph.",
+    "Neither submitted JPEG contained EXIF metadata, so capture times are not inferred from filesystem timestamps.",
+    "The two photographs jointly cover the platform close-up and the representative wiring overview required by the frozen protocol."
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "status": "frozen",
+  "freeze_id": "rdmr-pli-phase3-freeze-20260728",
+  "freeze_date": "2026-07-28",
+  "protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "implementation_version": "0.3.2",
+  "firmware_revision": 14,
+  "selected_candidate_id": "residual-new-0p30",
+  "selected_complete_config_id": "2bbfc2ff25556e06",
+  "parameters": {
+    "interval_fast_blocks": 1,
+    "interval_mid_blocks": 3,
+    "interval_slow_blocks": 12,
+    "residual_new_weight": 0.3,
+    "threshold_scale": 1.0,
+    "block_size_samples": 50
+  },
+  "parameter_fingerprint_sha256": "2BBFC2FF25556E06E7A61B44037C10D41AACBB308D2836F49ACEC5323CFB1802",
+  "selection_evidence": {
+    "candidate_runs": 360,
+    "paired_a2_reference_runs": 30,
+    "validation_trajectories": [
+      "F1",
+      "F3",
+      "F4"
+    ],
+    "validation_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "mean_paired_snr_difference_db": -0.27775948190000016,
+    "paired_snr_bootstrap_ci95_lower_db": -0.3590428802325003,
+    "paired_snr_bootstrap_ci95_upper_db": -0.19512479708666694,
+    "snr_gate": "PASS: lower bound > -0.5 dB",
+    "median_host_tsc_ticks_per_sample": 1225.3289375,
+    "median_host_ns_per_sample": 531.8375,
+    "median_tracker_calls_reduction_fraction": 0.7875,
+    "selection_order": [
+      "strict paired SNR gate",
+      "minimum median host TSC ticks/sample",
+      "candidate_id lexical tie-break"
+    ]
+  },
+  "seed_isolation": {
+    "status": "PASS",
+    "evaluated_seed_min": 100,
+    "evaluated_seed_max": 109,
+    "frozen_test_seed_min": 1000,
+    "frozen_test_seed_max": 1029,
+    "forbidden_overlap": [],
+    "frozen_test_signal_values_generated": false
+  },
+  "alignment_and_build": {
+    "unit_tests": "PASS: 12/12",
+    "c_python_alignment": "PASS: 364 rows, 0 failures",
+    "armcc_build": "PASS",
+    "map_total_ro_bytes": 20376,
+    "map_total_rw_bytes": 5904,
+    "map_total_rom_bytes": 20380
+  },
+  "evidence_boundary": {
+    "phase3_host_ranking": "established",
+    "stm32_buildability": "established",
+    "c_python_selected_parameter_alignment": "established",
+    "stm32_a3_vs_a2_dwt_cycle_reduction": "NOT_CHECKED",
+    "physical_mcu_timing": "NOT_CHECKED",
+    "power_or_energy_reduction": "NOT_CHECKED",
+    "frozen_test_generalization": "NOT_READ"
+  },
+  "hashes_sha256": {
+    "frozen_ei_draft": "629A01139433FBA0E07191C64263D02EF7EDEE8CBFE237C9D1419FE630BDF287",
+    "frozen_protocol_markdown": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933",
+    "machine_protocol_json": "53E5B6D8DD109F22748199CAA282EF027CDC80AD46994B1944E2E4527DCC790D",
+    "tuning_space_json": "FA4E2DCE0F7FD3B50C734EEDA0F56B3FE8E0FC9D44DA0B124BD81C396EC889D7",
+    "candidate_runs_csv": "F1956CE760881BDCDAA6F25511EB8D903202CD7C37E081977D9A540097C15470",
+    "candidate_summary_csv": "0CA918554D5D7A5E2933962508DE9F0E9F8BCF5E468B6B503473282889374FE9",
+    "tuning_result_json": "6E8C0D59514C7EC82F92165560A9333B1844F5095A03684DA17B86F4E1761974",
+    "seed_access_audit_json": "26583BFC8F4AFDDBD66EE5B85DFFB04EF2405B2ABAF2445AB41AD7C7E5594156",
+    "rdmr_pli_c": "9A6DB8C151182745B872F598FB19A332C480C8CEEC6DCDBBDE79B9EE92B0BAFF",
+    "rdmr_pli_h": "3BCD434D77AA3F738F61DD126779A4F4537711AC9D479492869EC15F8996DA1D",
+    "formal_algorithms_py": "79DF383B5F7380A04761B8D1128600B8799E008639AFD128F10BBF5363D94939",
+    "rdmr_experiment_config_h": "48BA5CBCF0B00184C66DF970E437FE99FAD4F813A077E77555BBEFBE843BA741",
+    "stm32_main_c": "6A9FA60AE832C5C3E881729D89FB18D80E2B29CAD1268311AAA092C4D9B2B14B",
+    "phase3_tuning_runner_py": "1B4748C35046ECB5DCDFC3C613F7AAD0075EDE06E632C75438EED76F1D66C57A",
+    "phase3_host_case_c": "FED5AC2357EACF8E215C1F73C19F26D86076EDC4B690A17BA81C8EDAB73D4868",
+    "phase3_freeze_verifier_py": "DA97DE64B00F1BFD797063686343EB1FB153885D92F69D527FB6CB22FFCF47B1",
+    "phase3_alignment_report_json": "3B65977C7C19B7840D3FB8D32650D49EC052EAC8D40E63FF8B1A576850B5D1D8",
+    "a3_rev14_hex": "41E15CB0F656E13805941F983751C73221FCC009D44880A5B777CD44FADEE0C3",
+    "a3_rev14_axf": "0FB5AFAB04EE040810D9922AA1B3533588578EA49BDA6E97AED90A54F2581298",
+    "a3_rev14_map": "8F2D30F2982C8662D80232C5372522C4A992562D8B03CCC72028EE30F26C8FD6"
+  },
+  "anti_silent_change_rule": "Any downstream Phase 4/5 runner must recompute the parameter fingerprint and listed implementation hashes before execution; a mismatch is a hard stop requiring a new versioned freeze manifest."
+}

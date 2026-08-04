@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "candidate_row_count": 360,
+  "expected_candidate_row_count": 360,
+  "evaluated_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "evaluated_trajectories": [
+    "F1",
+    "F3",
+    "F4"
+  ],
+  "forbidden_seed_overlap": [],
+  "frozen_evaluation_seed_values_generated": false,
+  "development_seed_values_generated": false,
+  "selection_used_only_validation_rows": true,
+  "execution_order": [
+    "intervals-1-2-6",
+    "threshold-scale-1p25",
+    "block-size-25",
+    "threshold-scale-0p75",
+    "residual-new-0p05",
+    "residual-new-0p30",
+    "residual-new-0p15",
+    "block-size-100",
+    "intervals-1-3-12",
+    "block-size-50",
+    "threshold-scale-1p00",
+    "intervals-1-4-16"
+  ]
+}

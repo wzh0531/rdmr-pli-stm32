@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "row_count": 364,
+  "scenario": "F1, amplitude=0.50, noise=20 dB, seed=0",
+  "sample_count_processed_per_algorithm": 4202,
+  "tolerances": {
+    "input": 3e-06,
+    "output": 0.0002,
+    "frequency_used_hz": 0.0005,
+    "frequency_next_hz": 0.0005,
+    "residual_ratio": 2e-05
+  },
+  "maximum_absolute_differences": {
+    "input": 1.869999998599381e-09,
+    "output": 1.6389999999977256e-06,
+    "frequency_used_hz": 0.0,
+    "frequency_next_hz": 0.0,
+    "residual_ratio": 1.4999999992104662e-08
+  },
+  "failures": [],
+  "failure_count": 0
+}

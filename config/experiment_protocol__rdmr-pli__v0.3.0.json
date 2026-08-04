@@ -1,0 +1,168 @@
+{
+  "schema_version": "0.3.0",
+  "protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "log_schema_version": "rdmr-alignment-csv-v1",
+  "sample_rate_hz": 1000,
+  "sample_count": 8000,
+  "algorithm_ids": {
+    "A0": 0,
+    "A1": 1,
+    "A2": 2,
+    "A3": 3
+  },
+  "trajectory_ids": {
+    "F0": 0,
+    "F1": 1,
+    "F2": 2,
+    "F3": 3,
+    "F4": 4,
+    "F5": 5
+  },
+  "near_line_ids": {
+    "N0": 0,
+    "N1": 1,
+    "N2": 2,
+    "N3": 3
+  },
+  "noise_ids": {
+    "none": 0,
+    "snr_20_db": 1,
+    "snr_10_db": 2
+  },
+  "useful_signal": {
+    "components": [
+      {
+        "frequency_hz": 7,
+        "amplitude": 0.18,
+        "initial_phase_rad": 0
+      },
+      {
+        "frequency_hz": 13,
+        "amplitude": 0.10,
+        "initial_phase_rad": 0
+      }
+    ],
+    "near_line_component_amplitude": 0.05,
+    "near_line_components_hz": {
+      "N0": [],
+      "N1": [
+        42
+      ],
+      "N2": [
+        58
+      ],
+      "N3": [
+        42,
+        58
+      ]
+    }
+  },
+  "frequency_trajectories": {
+    "F0": {
+      "kind": "constant",
+      "frequency_hz": 50
+    },
+    "F1": {
+      "kind": "step",
+      "before_hz": 49,
+      "after_hz": 51,
+      "change_sample": 4000
+    },
+    "F2": {
+      "kind": "step",
+      "before_hz": 47,
+      "after_hz": 53,
+      "change_sample": 4000
+    },
+    "F3": {
+      "kind": "hold_linear_hold",
+      "start_hz": 49,
+      "end_hz": 51,
+      "ramp_first_sample": 1000,
+      "ramp_last_sample": 6999
+    },
+    "F4": {
+      "kind": "sinusoidal",
+      "centre_hz": 50,
+      "deviation_hz": 1,
+      "period_samples": 4000
+    },
+    "F5": {
+      "kind": "bounded_random_walk",
+      "initial_hz": 50,
+      "update_interval_samples": 50,
+      "step_hz": 0.05,
+      "probabilities": [
+        0.25,
+        0.50,
+        0.25
+      ],
+      "lower_hz": 48.5,
+      "upper_hz": 51.5,
+      "boundary": "reflect"
+    }
+  },
+  "phase_convention": {
+    "definition": "phi[n] = phi0 + 2*pi/Fs * sum(f[k], k=0..n-1)",
+    "sample_value": "amplitude*sin(phi[n])",
+    "frequency_change_resets_phase": false,
+    "pli_initial_phase": "uniform_[0,2pi)_from_phase_substream"
+  },
+  "rng": {
+    "engine": "xorshift32",
+    "seed_derivation": "splitmix32(root_seed + stream_tag)",
+    "substreams": {
+      "frequency": 2654435769,
+      "noise": 2246822507,
+      "phase": 3266489909
+    },
+    "normal_transform": "float32_box_muller_cosine_branch",
+    "normal_transform_reason": "deterministic pseudorandom Gaussian samples from the isolated noise substream"
+  },
+  "seed_partitions": {
+    "development": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "validation_start": 100,
+    "validation_end": 109,
+    "frozen_start": 1000,
+    "frozen_end": 1029,
+    "embedded_alignment": 20260727
+  },
+  "alignment_scenarios": [
+    {
+      "scenario_id": "DEV-F0-NONE",
+      "algorithm": "A3",
+      "trajectory": "F0",
+      "pli_amplitude": 0.50,
+      "noise": "none",
+      "near_line": "N0"
+    },
+    {
+      "scenario_id": "DEV-F1-20DB",
+      "algorithm": "A3",
+      "trajectory": "F1",
+      "pli_amplitude": 0.50,
+      "noise": "snr_20_db",
+      "near_line": "N0"
+    }
+  ],
+  "alignment_sample_indices": [
+    0,
+    1,
+    2,
+    49,
+    50,
+    99,
+    100,
+    3998,
+    3999,
+    4000,
+    4001,
+    7999
+  ]
+}

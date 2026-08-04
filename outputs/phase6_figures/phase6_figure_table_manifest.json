@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS_WITH_PRESERVED_RIGHTS_CLEARED_FIG6",
+  "script": {
+    "path": "simulation\\golden_model\\generate_phase6_figures.py",
+    "sha256": "924E641BF37746ABED490F66A0C9CFF0192974075DB6FF90F88709CE93BE9D74"
+  },
+  "inputs": [
+    {
+      "path": "paper_workspace\\scope\\experiment-protocol__rdmr-pli__cssp-journal__candidate__v0.3.0.md",
+      "sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933"
+    },
+    {
+      "path": "outputs\\phase4_host\\phase4_run_metrics.csv",
+      "sha256": "C8BB0E61B555C37B5248EF39BCF101E8A32242D673B8A09402F5C63158666A41"
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_holm_by_trajectory.csv",
+      "sha256": "A28BE234D20E01745DA949260BDE59182DC43FF15B74CBBB741019C8D9A128FE"
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_paired_statistics.json",
+      "sha256": "5EB796DD8EF92F9069E47C2AF6E8383B9C50E9893A9BC5376F4CDF0AE1E952C9"
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_main_algorithm_summary.csv",
+      "sha256": "DEFF474DEDA0249943E8DDB8011DA0CC34321CAA4D2E1881724F7130F0C3F253"
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_ablation_summary.csv",
+      "sha256": "0966CC1934AD12DE2ED33395D3B845DC2E31942FEEB249AC38516A2121C20431"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\phase5_physical_matrix_summary.csv",
+      "sha256": "77AB95E782642F379D2CB59F76D265BF9A49AE158019DB31FB6B8D62CF24DB3E"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\phase5_physical_resource_summary.csv",
+      "sha256": "AD1AAA1BB651616E813685962C94E5D8B9194E008FAAB0B3CBDBA41C6CC9AE43"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\phase5_three_level_consistency.csv",
+      "sha256": "77FF63945DDA822FCC2C3E8CAC83B9FE4685A61E334592DAC4EDA74C4E346FD2"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\phase5_physical_photo_evidence_manifest.json",
+      "sha256": "0FA4857BF8A4105D302B4B56FD43056A77D4797108EE20B2945CE98AFCA2857C"
+    }
+  ],
+  "physical_log_count": 36,
+  "physical_log_hashes": [
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S501_A0_F1_P050_Z20_REV15_COLD01.txt",
+      "sha256": "82EB95EC3B5441DBB0957B857C571B2388ADE54C59C4A355342999110EDF1C24"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S501_A0_F1_P050_Z20_REV15_COLD02.txt",
+      "sha256": "AC8E7FEB4B4E9E47AF8A8E289ACC6BC20E3D22FFCF6135AC3BA7B4707B18AA01"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S501_A0_F1_P050_Z20_REV15_COLD03.txt",
+      "sha256": "AC8E7FEB4B4E9E47AF8A8E289ACC6BC20E3D22FFCF6135AC3BA7B4707B18AA01"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S502_A1_F1_P050_Z20_REV15_COLD01.txt",
+      "sha256": "88DA1DA6912C1071151AB4B6882FA7C830E6FFEF03E62D2E27FFB34AEDFD2F1B"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S502_A1_F1_P050_Z20_REV15_COLD02.txt",
+      "sha256": "B0D38B737095ADF8998BACD6B473BF9EDC33DD5475C854F417DD12BF322A52A1"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S502_A1_F1_P050_Z20_REV15_COLD03.txt",
+      "sha256": "88DA1DA6912C1071151AB4B6882FA7C830E6FFEF03E62D2E27FFB34AEDFD2F1B"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S503_A2_F1_P050_Z20_REV15_COLD01.txt",
+      "sha256": "7C5A5BE7172B1D0A8EF4CCD63B8F64E0E5D27D8B48F6CD79B7FE1741F32E56C1"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S503_A2_F1_P050_Z20_REV15_COLD02.txt",
+      "sha256": "139A7882B35B701D5C5D715914F36F437A09DA1937CF298C690604594C713890"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S503_A2_F1_P050_Z20_REV15_COLD03.txt",
+      "sha256": "7C5A5BE7172B1D0A8EF4CCD63B8F64E0E5D27D8B48F6CD79B7FE1741F32E56C1"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S504_A3_F1_P050_Z20_REV15_COLD01.txt",
+      "sha256": "F9873661ED9E1DE752A96F729E4FE9AF68688BAB70A5521A1ACE56238B9DA9B4"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S504_A3_F1_P050_Z20_REV15_COLD02.txt",
+      "sha256": "F9873661ED9E1DE752A96F729E4FE9AF68688BAB70A5521A1ACE56238B9DA9B4"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P1_S504_A3_F1_P050_Z20_REV15_COLD03.txt",
+      "sha256": "F9873661ED9E1DE752A96F729E4FE9AF68688BAB70A5521A1ACE56238B9DA9B4"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S505_A2_F2_P020_Z20_REV15_COLD01.txt",
+      "sha256": "A0B59599C0D9947476370B37229D8D861ED48CBF6B38061E1974A61A9D6DB533"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S505_A2_F2_P020_Z20_REV15_COLD02.txt",
+      "sha256": "A0B59599C0D9947476370B37229D8D861ED48CBF6B38061E1974A61A9D6DB533"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S505_A2_F2_P020_Z20_REV15_COLD03.txt",
+      "sha256": "A0B59599C0D9947476370B37229D8D861ED48CBF6B38061E1974A61A9D6DB533"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S506_A3_F2_P020_Z20_REV15_COLD01.txt",
+      "sha256": "FC0AEA1A86529B5874E6CC5946770457E26B85A3E9106C81117AD51A5926D269"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S506_A3_F2_P020_Z20_REV15_COLD02.txt",
+      "sha256": "FC0AEA1A86529B5874E6CC5946770457E26B85A3E9106C81117AD51A5926D269"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S506_A3_F2_P020_Z20_REV15_COLD03.txt",
+      "sha256": "FC0AEA1A86529B5874E6CC5946770457E26B85A3E9106C81117AD51A5926D269"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S507_A2_F2_P050_Z20_REV15_COLD01.txt",
+      "sha256": "CE7A6FE37686C16D97F3C87D76358C68174B4874391C002265D0BD6D619C80E2"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S507_A2_F2_P050_Z20_REV15_COLD02.txt",
+      "sha256": "CE7A6FE37686C16D97F3C87D76358C68174B4874391C002265D0BD6D619C80E2"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S507_A2_F2_P050_Z20_REV15_COLD03.txt",
+      "sha256": "CE7A6FE37686C16D97F3C87D76358C68174B4874391C002265D0BD6D619C80E2"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S508_A3_F2_P050_Z20_REV15_COLD01.txt",
+      "sha256": "B136816764C82701EF8F4498DE5232AFD2B946401453D69EC30A3614E4497B0E"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S508_A3_F2_P050_Z20_REV15_COLD02.txt",
+      "sha256": "A5BAA00D1529B1B22D51D3618B21E14F7713B77C32750894C65FEC54614921AD"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S508_A3_F2_P050_Z20_REV15_COLD03.txt",
+      "sha256": "A5BAA00D1529B1B22D51D3618B21E14F7713B77C32750894C65FEC54614921AD"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S509_A2_F2_P100_Z20_REV15_COLD01.txt",
+      "sha256": "3578C3F8B7C964B4DE5EA1650E910B51DB8F9DF85D65A97F56BD6A1E81660990"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S509_A2_F2_P100_Z20_REV15_COLD02.txt",
+      "sha256": "3578C3F8B7C964B4DE5EA1650E910B51DB8F9DF85D65A97F56BD6A1E81660990"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S509_A2_F2_P100_Z20_REV15_COLD03.txt",
+      "sha256": "3578C3F8B7C964B4DE5EA1650E910B51DB8F9DF85D65A97F56BD6A1E81660990"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S510_A3_F2_P100_Z20_REV15_COLD01.txt",
+      "sha256": "7067D1DCE745CAD1B34CD548972895843D24C6C8D8532D2EB28204D4E6737040"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S510_A3_F2_P100_Z20_REV15_COLD02.txt",
+      "sha256": "7067D1DCE745CAD1B34CD548972895843D24C6C8D8532D2EB28204D4E6737040"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P2_S510_A3_F2_P100_Z20_REV15_COLD03.txt",
+      "sha256": "7067D1DCE745CAD1B34CD548972895843D24C6C8D8532D2EB28204D4E6737040"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P3_S511_A2_F3_P050_Z20_REV15_COLD01.txt",
+      "sha256": "A2387C4BBCB46EB0BA8AD1BAD0963D6F9C71E0D1EE2FBDAABD84D270A556F95F"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P3_S511_A2_F3_P050_Z20_REV15_COLD02.txt",
+      "sha256": "A2387C4BBCB46EB0BA8AD1BAD0963D6F9C71E0D1EE2FBDAABD84D270A556F95F"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P3_S511_A2_F3_P050_Z20_REV15_COLD03.txt",
+      "sha256": "A2387C4BBCB46EB0BA8AD1BAD0963D6F9C71E0D1EE2FBDAABD84D270A556F95F"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P3_S512_A3_F3_P050_Z20_REV15_COLD01.txt",
+      "sha256": "B432491818BBEA6A02CC89366545C398E2A88097D5F7CB0BA460ED841200C413"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P3_S512_A3_F3_P050_Z20_REV15_COLD02.txt",
+      "sha256": "B432491818BBEA6A02CC89366545C398E2A88097D5F7CB0BA460ED841200C413"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\logs\\PHASE5_PHYSICAL_P3_S512_A3_F3_P050_Z20_REV15_COLD03.txt",
+      "sha256": "B432491818BBEA6A02CC89366545C398E2A88097D5F7CB0BA460ED841200C413"
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "Fig1",
+      "function": "Explain the A3 signal path and FAST/MID/SLOW scheduler.",
+      "sources": [
+        "frozen protocol v0.3.0",
+        "frozen Rev15 implementation"
+      ],
+      "transformation": "Original vector diagram generated from the implementation structure.",
+      "rights_state": "ORIGINAL_PROJECT_GENERATED",
+      "first_citation": "Methods: proposed residual-driven multirate scheduler",
+      "files": [
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig1_algorithm_and_scheduler.png",
+          "sha256": "7FA99B1354ED245FD2E21917CD62552D7F78D49D5680A04DD15C45DF1A30C2A7",
+          "bytes": 177617
+        },
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig1_algorithm_and_scheduler.svg",
+          "sha256": "431AF9A1E13B0FE4B49345CE3195058ED537653C7E757EC4E1997EF73F4BA754",
+          "bytes": 62073
+        }
+      ]
+    },
+    {
+      "figure_id": "Fig2",
+      "function": "Show representative tracking and output traces for F1/F2/F5.",
+      "sources": [
+        "hash-locked composite preserved from the complete Phase-4 package"
+      ],
+      "transformation": "The released package preserves the generated Fig. 2 PNG/SVG. It does not regenerate this figure because the 287 MB regenerable NPZ batch set is intentionally excluded.",
+      "rights_state": "ORIGINAL_PROJECT_DATA_PRESERVED",
+      "first_citation": "Results: representative dynamic trajectories",
+      "files": [
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig2_frequency_tracking_and_output_waveforms.png",
+          "sha256": "AD91A89B985D0F2E5A144FE4B79B5F1E3A57E9D1603B88E86469CC7B2C11383A",
+          "bytes": 461563
+        },
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig2_frequency_tracking_and_output_waveforms.svg",
+          "sha256": "D00FFAE34BADA966E26D412A84143C1925369D07C6CF4BBE9A2D4E0136A10674",
+          "bytes": 188233
+        }
+      ]
+    },
+    {
+      "figure_id": "Fig3",
+      "function": "Report overall and trajectory-level A3-A2 output-SNR differences.",
+      "sources": [
+        "outputs\\phase6_statistics\\phase6_holm_by_trajectory.csv",
+        "outputs\\phase6_statistics\\phase6_paired_statistics.json"
+      ],
+      "transformation": "Forest plot of deterministic 20,000-resample paired bootstrap CIs.",
+      "rights_state": "ORIGINAL_PROJECT_DATA",
+      "first_citation": "Results: paired noninferiority analysis",
+      "files": [
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig3_snr_difference_bootstrap_ci.png",
+          "sha256": "A661FE9F283709007C58357FD3E12B3785B95BB19A46B10A87132E9139BA537D",
+          "bytes": 83566
+        },
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig3_snr_difference_bootstrap_ci.svg",
+          "sha256": "2D614CACF37FAFA26F4F5DC3903775840AB0EB4E8D531D51A18AF2122624F499",
+          "bytes": 52398
+        }
+      ]
+    },
+    {
+      "figure_id": "Fig4",
+      "function": "Jointly display physical output SNR, tracker calls, and mean cycles.",
+      "sources": [
+        "outputs\\phase5_physical_core\\phase5_physical_matrix_summary.csv",
+        "outputs\\phase5_physical_core\\phase5_three_level_consistency.csv"
+      ],
+      "transformation": "Scenario-level scatter; log cycle axis; color encodes physical output SNR.",
+      "rights_state": "ORIGINAL_PROJECT_DATA",
+      "first_citation": "Results: implementation performance-overhead tradeoff",
+      "files": [
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig4_snr_tracker_calls_cycles_pareto.png",
+          "sha256": "D791A3FE5EA8564589BC4B43B6C2D32580DE26AD22C3817B9574CDFE55170EC9",
+          "bytes": 181955
+        },
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig4_snr_tracker_calls_cycles_pareto.svg",
+          "sha256": "ECB2EC878B1B16F94A5498FB627FC8E67B75BBCA592429B4A79B7C96973AA14C",
+          "bytes": 87025
+        }
+      ]
+    },
+    {
+      "figure_id": "Fig5",
+      "function": "Show SNR/call tradeoffs across the four ablation families.",
+      "sources": [
+        "outputs\\phase6_statistics\\phase6_ablation_summary.csv"
+      ],
+      "transformation": "One-factor-at-a-time validation-set summaries; selected level highlighted.",
+      "rights_state": "ORIGINAL_PROJECT_DATA",
+      "first_citation": "Results: ablation and parameter freeze",
+      "files": [
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig5_ablation_tradeoffs.png",
+          "sha256": "59EF9FE0F206B843AD21B517B9DC119F7F7B2DFA3E618B71315B2A012F8E4DDE",
+          "bytes": 436725
+        },
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig5_ablation_tradeoffs.svg",
+          "sha256": "68A866EAE023F3ED63973EF07C6D9382BBC760A61C505D19E98BE4B977EBDE98",
+          "bytes": 126058
+        }
+      ]
+    },
+    {
+      "figure_id": "Fig6",
+      "function": "Document the physical setup and the measured DWT cycle distribution.",
+      "sources": [
+        "rights-cleared composite preserved from the manuscript package",
+        "outputs/phase5_physical_core/logs/*.txt"
+      ],
+      "transformation": "The released package preserves the rights-cleared Fig. 6 PNG/SVG. It does not regenerate the photo panels because the raw photographs are outside the authorized public package.",
+      "rights_state": "RIGHTS_CLEARED_COMPOSITE_PRESERVED",
+      "first_citation": "Implementation results: physical platform and DWT timing",
+      "files": [
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig6_physical_platform_and_dwt_cycles.png",
+          "sha256": "6DA746BB285C3A6CCB477EE062DFD24978D836576CD93F5BA7C344271621C5CA",
+          "bytes": 3688403
+        },
+        {
+          "path": "outputs\\phase6_figures\\figures\\fig6_physical_platform_and_dwt_cycles.svg",
+          "sha256": "EBCCFE6348A4A90548F4FB46CCFED8BF380C1703A27E0D367868539B31E82280",
+          "bytes": 846408
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "Table1",
+      "function": "Protocol parameters and data partitions.",
+      "path": "outputs\\phase6_figures\\tables\\table1_protocol_and_data_partition.csv",
+      "sources": [
+        "protocol v0.3.0",
+        "phase3 freeze",
+        "phase4/5 manifests"
+      ],
+      "rights_state": "ORIGINAL_PROJECT_DATA",
+      "first_citation": "Methods: experiment protocol",
+      "sha256": "445D70A9F15692657842B6723BFF73A56DEFD18E321ED26ADACEBC359AAC3AC6",
+      "bytes": 784
+    },
+    {
+      "table_id": "Table2",
+      "function": "Four-algorithm frozen main-matrix results.",
+      "path": "outputs\\phase6_figures\\tables\\table2_four_algorithm_main_results.csv",
+      "sources": [
+        "outputs\\phase6_statistics\\phase6_main_algorithm_summary.csv"
+      ],
+      "rights_state": "ORIGINAL_PROJECT_DATA",
+      "first_citation": "Results: host comparison",
+      "sha256": "B764563931E0B0A64B9EB2686290DBC67286582D6D5AA990647A02674CA4285D",
+      "bytes": 956
+    },
+    {
+      "table_id": "Table3",
+      "function": "Physical cycles and whole-firmware Flash/RAM evidence.",
+      "path": "outputs\\phase6_figures\\tables\\table3_stm32_cycles_flash_ram.csv",
+      "sources": [
+        "outputs\\phase5_physical_core\\phase5_physical_matrix_summary.csv",
+        "outputs\\phase5_physical_core\\phase5_physical_resource_summary.csv"
+      ],
+      "rights_state": "ORIGINAL_PROJECT_DATA",
+      "first_citation": "Implementation results: STM32 resources",
+      "sha256": "98C71E0DA2E41E5506B8021D439B2815E97E9B08166111F8521FB631FC9C3AA7",
+      "bytes": 759
+    }
+  ],
+  "checks": {
+    "six_figures_png_and_svg": "PASS",
+    "three_candidate_tables": "PASS",
+    "figure_data_sources_hash_bound": "PASS",
+    "figure2_trace_batches": "PRESERVED_OUTPUT",
+    "physical_log_count_36": "PASS",
+    "photo_original_bytes_preserved": "NOT_INCLUDED",
+    "photo_authorship_and_publication_consent": "RIGHTS_CONFIRMED_OUTSIDE_PUBLIC_PACKAGE",
+    "hard_realtime_claim_boundary_visible": "PASS"
+  },
+  "frozen_hash_assertions": {
+    "protocol_sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933",
+    "ei_draft_sha256": "629A01139433FBA0E07191C64263D02EF7EDEE8CBFE237C9D1419FE630BDF287",
+    "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
+  }
+}

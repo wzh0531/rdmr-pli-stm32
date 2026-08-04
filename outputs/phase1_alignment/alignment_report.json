@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "row_count": 120,
+  "tolerances": {
+    "clean": 2e-06,
+    "interference": 2e-06,
+    "noise": 2e-06,
+    "input": 3e-06,
+    "true_frequency_hz": 1e-07
+  },
+  "maximum_absolute_differences": {
+    "clean": 0.0,
+    "interference": 0.0,
+    "noise": 1.900000001081592e-09,
+    "input": 0.0,
+    "true_frequency_hz": 0.0
+  },
+  "failures": [],
+  "protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "development_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "c_vectors_sha256": "d3d0e64bdc9f0c3636eb88aa6ba11ac81dbdf8462a2663322733bef07578a37a",
+  "python_vectors_sha256": "553f50d6f070b672647638a4b27c1ddb7d6d2bdce1bd9ba8fe9546795dacb3ec",
+  "artifact_hashes": {
+    "machine_config": "53e5b6d8dd109f22748199caa282ef027cdc80ad46994b1944e2e4527dcc790d",
+    "c_config_header": "370d3eb5c971ada25d7db6f08ce5c8a14da7dea1a247c68f4b1fd6fac59307ea",
+    "c_signal_header": "a921f8b0480b79168a263a67951be6dee814ff6566885d70459ff058b8612617",
+    "c_signal_generator": "f531b2dc83ae85fa4ee09467d7101ec2a131b031059a707c2821a72885aef3bc",
+    "python_signal_generator": "ce7176274541aca7440d4143c5bdeb06aa11866ab95789edc8bd7fa864a859e3",
+    "stm32_main": "56c75ee1ec2e853ff9384f9221fe96b75b21c09f81ebc00a099dadcbd5877f1e",
+    "stm32_hex": "c94c365ba868e8323c625151be0426af3f13c8accf7a3e8775c2775ad250c010",
+    "stm32_map": "7e2020e1bffc36a5a8e0c3d9cef899d2714b81a4a2715f43b1fc9307f72a1a38"
+  }
+}

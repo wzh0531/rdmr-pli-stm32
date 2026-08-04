@@ -1,0 +1,424 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FAIL_REALTIME",
+  "received": 12,
+  "expected": 12,
+  "missing": [],
+  "integrity_failures": [],
+  "realtime_failures": [
+    {
+      "scenario_id": 503,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P1_S503_A2_F1_P050_Z20_REV14.txt",
+      "sha256": "5A3C50975C337795C25F93F5DDF005740AF23A74BA39064CEDD0D73262E2B5F6",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 581023,
+      "cycles_p95": 2088,
+      "cycles_max": 30168875,
+      "tracker_cycles_mean": 28951341,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 504,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P1_S504_A3_F1_P050_Z20_REV14.txt",
+      "sha256": "CB9F166F04A781D99C1889E9EDE75E1D9991701B5B28DDD557BBA7ED4C6E2FAB",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 110711,
+      "cycles_p95": 2089,
+      "cycles_max": 29792793,
+      "tracker_cycles_mean": 26344368,
+      "final_tracker_calls": 33,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 505,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S505_A2_F2_P020_Z20_REV14.txt",
+      "sha256": "3DA040A42E1DD27FD2AE60DAF9F625D43AF0C31BBE0A43D25235C09990075808",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 583344,
+      "cycles_p95": 2078,
+      "cycles_max": 30134434,
+      "tracker_cycles_mean": 29067506,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 506,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S506_A3_F2_P020_Z20_REV14.txt",
+      "sha256": "8C0126A1D164FF57680E37D8789612921BE8B4D749759D08FFE7F83869FD1A40",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 107425,
+      "cycles_p95": 2084,
+      "cycles_max": 30134529,
+      "tracker_cycles_mean": 26346324,
+      "final_tracker_calls": 32,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 507,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S507_A2_F2_P050_Z20_REV14.txt",
+      "sha256": "EE8353930B9F5DF7195020E169AEA4B28C1DA3D9A24889B1F8AA83E723EB46BC",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 581917,
+      "cycles_p95": 2090,
+      "cycles_max": 30191426,
+      "tracker_cycles_mean": 28996111,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 508,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S508_A3_F2_P050_Z20_REV14.txt",
+      "sha256": "5D0F8322A65BCE07D5D7071410D95D42921570D44FDFC9E10A83D9A6C528AAB6",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 125831,
+      "cycles_p95": 2084,
+      "cycles_max": 29884691,
+      "tracker_cycles_mean": 26765963,
+      "final_tracker_calls": 37,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 509,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S509_A2_F2_P100_Z20_REV14.txt",
+      "sha256": "1F037CA4A875844BD33D09800F42428C975129FB704EAA4065028121173691EF",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 580823,
+      "cycles_p95": 2088,
+      "cycles_max": 30142674,
+      "tracker_cycles_mean": 28941246,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 510,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S510_A3_F2_P100_Z20_REV14.txt",
+      "sha256": "675E5C01F5A529B28515AEEDE4806CADEF0831E1DB9DC8B27CC287B193FE8DE1",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 136596,
+      "cycles_p95": 2087,
+      "cycles_max": 30072854,
+      "tracker_cycles_mean": 26911053,
+      "final_tracker_calls": 40,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 511,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P3_S511_A2_F3_P050_Z20_REV14.txt",
+      "sha256": "9D919578771E21322FD0B81F360E90103AB732952137F453D330FB8D177275FF",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 581240,
+      "cycles_p95": 2097,
+      "cycles_max": 30168875,
+      "tracker_cycles_mean": 28962190,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 512,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P3_S512_A3_F3_P050_Z20_REV14.txt",
+      "sha256": "3ADC3B02798A43F60BCF2F3992807782D054D8FE84973CD2596DB5708897923A",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 69979,
+      "cycles_p95": 2079,
+      "cycles_max": 29783335,
+      "tracker_cycles_mean": 24703374,
+      "final_tracker_calls": 22,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "scenario_id": 501,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P1_S501_A0_F1_P050_Z20_REV14.txt",
+      "sha256": "A500F4AEEA22F19AFEFF8AFA43F8364568F14B25BDBC2A2F5C0D48E76C2884A4",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "realtime_status": "PASS",
+      "row_count": 160,
+      "cycles_mean": 695,
+      "cycles_p95": 726,
+      "cycles_max": 748,
+      "tracker_cycles_mean": 0,
+      "final_tracker_calls": 0,
+      "errors": [],
+      "realtime_errors": []
+    },
+    {
+      "scenario_id": 502,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P1_S502_A1_F1_P050_Z20_REV14.txt",
+      "sha256": "70E308BB6004FD49E1F269E71CB0F850D6C2CE11AD7CF765838233C1A8C896EA",
+      "status": "PASS",
+      "integrity_status": "PASS",
+      "realtime_status": "PASS",
+      "row_count": 160,
+      "cycles_mean": 2047,
+      "cycles_p95": 2080,
+      "cycles_max": 2854,
+      "tracker_cycles_mean": 0,
+      "final_tracker_calls": 0,
+      "errors": [],
+      "realtime_errors": []
+    },
+    {
+      "scenario_id": 503,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P1_S503_A2_F1_P050_Z20_REV14.txt",
+      "sha256": "5A3C50975C337795C25F93F5DDF005740AF23A74BA39064CEDD0D73262E2B5F6",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 581023,
+      "cycles_p95": 2088,
+      "cycles_max": 30168875,
+      "tracker_cycles_mean": 28951341,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 504,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P1_S504_A3_F1_P050_Z20_REV14.txt",
+      "sha256": "CB9F166F04A781D99C1889E9EDE75E1D9991701B5B28DDD557BBA7ED4C6E2FAB",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 110711,
+      "cycles_p95": 2089,
+      "cycles_max": 29792793,
+      "tracker_cycles_mean": 26344368,
+      "final_tracker_calls": 33,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 505,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S505_A2_F2_P020_Z20_REV14.txt",
+      "sha256": "3DA040A42E1DD27FD2AE60DAF9F625D43AF0C31BBE0A43D25235C09990075808",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 583344,
+      "cycles_p95": 2078,
+      "cycles_max": 30134434,
+      "tracker_cycles_mean": 29067506,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 506,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S506_A3_F2_P020_Z20_REV14.txt",
+      "sha256": "8C0126A1D164FF57680E37D8789612921BE8B4D749759D08FFE7F83869FD1A40",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 107425,
+      "cycles_p95": 2084,
+      "cycles_max": 30134529,
+      "tracker_cycles_mean": 26346324,
+      "final_tracker_calls": 32,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 507,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S507_A2_F2_P050_Z20_REV14.txt",
+      "sha256": "EE8353930B9F5DF7195020E169AEA4B28C1DA3D9A24889B1F8AA83E723EB46BC",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 581917,
+      "cycles_p95": 2090,
+      "cycles_max": 30191426,
+      "tracker_cycles_mean": 28996111,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 508,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S508_A3_F2_P050_Z20_REV14.txt",
+      "sha256": "5D0F8322A65BCE07D5D7071410D95D42921570D44FDFC9E10A83D9A6C528AAB6",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 125831,
+      "cycles_p95": 2084,
+      "cycles_max": 29884691,
+      "tracker_cycles_mean": 26765963,
+      "final_tracker_calls": 37,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 509,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S509_A2_F2_P100_Z20_REV14.txt",
+      "sha256": "1F037CA4A875844BD33D09800F42428C975129FB704EAA4065028121173691EF",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 580823,
+      "cycles_p95": 2088,
+      "cycles_max": 30142674,
+      "tracker_cycles_mean": 28941246,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 510,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P2_S510_A3_F2_P100_Z20_REV14.txt",
+      "sha256": "675E5C01F5A529B28515AEEDE4806CADEF0831E1DB9DC8B27CC287B193FE8DE1",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 136596,
+      "cycles_p95": 2087,
+      "cycles_max": 30072854,
+      "tracker_cycles_mean": 26911053,
+      "final_tracker_calls": 40,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 511,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P3_S511_A2_F3_P050_Z20_REV14.txt",
+      "sha256": "9D919578771E21322FD0B81F360E90103AB732952137F453D330FB8D177275FF",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 581240,
+      "cycles_p95": 2097,
+      "cycles_max": 30168875,
+      "tracker_cycles_mean": 28962190,
+      "final_tracker_calls": 160,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    },
+    {
+      "scenario_id": 512,
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P3_S512_A3_F3_P050_Z20_REV14.txt",
+      "sha256": "3ADC3B02798A43F60BCF2F3992807782D054D8FE84973CD2596DB5708897923A",
+      "status": "FAIL_REALTIME",
+      "integrity_status": "PASS",
+      "realtime_status": "FAIL",
+      "row_count": 160,
+      "cycles_mean": 69979,
+      "cycles_p95": 2079,
+      "cycles_max": 29783335,
+      "tracker_cycles_mean": 24703374,
+      "final_tracker_calls": 22,
+      "errors": [],
+      "realtime_errors": [
+        "block maximum cycle deadline violation",
+        "STATS deadline violations"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the associated article and this repository."
+title: "Residual-Driven Multirate Frequency Tracking for Power-Line Interference Cancellation on STM32"
+type: software
+authors:
+  - family-names: "Wang"
+    given-names: "Zihan"
+    orcid: "https://orcid.org/0009-0004-7660-158X"
+    affiliation: "School of Electronic and Information Engineering, Hebei University of Technology"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/wzh0531/rdmr-pli-stm32"
+keywords:
+  - power-line interference
+  - adaptive noise cancellation
+  - frequency tracking
+  - multirate scheduling
+  - STM32

@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.0.0",
+  "status": "candidate-awaiting-proteus-logs",
+  "protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "implementation_version": "0.3.2",
+  "firmware_revision": 14,
+  "compiler": "ARMCC, Cortex-M3, C99, -O2, split_sections",
+  "clock_contract": {
+    "proteus_osc_frequency_hz": 9000000,
+    "proteus_clock_scale": "8 Times",
+    "effective_core_hz": 72000000,
+    "uart_baud": 115200
+  },
+  "freeze_manifest_sha256": "5200DB9E27465347607DDDC5DE732B755AFB0E1AC5D5AF673A6B20BA26095775",
+  "build_script_sha256": "826719573024AD9771B81C59120FA25AD10A4084B29036B37FFDB495A3C258F3",
+  "scenario_build_script_sha256": "29C2512141C788E28F6FB83BBB833291E1C00F8143A20975EFC54C291C2E67D8",
+  "scenario_count": 12,
+  "scenarios": [
+    {
+      "scenario_id": 501,
+      "group": "P1",
+      "algorithm": "A0",
+      "algorithm_id": 0,
+      "trajectory": "F1",
+      "trajectory_id": 1,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 0,
+      "log_filename": "PHASE5_P1_S501_A0_F1_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S501_A0_F1_P050_Z20_REV14.hex",
+          "sha256": "C35D4EC5740DC654D794EC37E89DBFE44874D4424B594F0CB32DA0E98F711757",
+          "bytes": 57418
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S501_A0_F1_P050_Z20_REV14.axf",
+          "sha256": "208C852D5FB47E4B13D8E1F424C66A8B8A2C7CBFE16935687F29B57572577CC9",
+          "bytes": 93272
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S501_A0_F1_P050_Z20_REV14.map",
+          "sha256": "9C279AF68A8A18B933FD9CEAB03215E1322ACA7439C279F3E4C5D8B4D9B71710",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20392,
+        "rw_bytes": 5904,
+        "rom_bytes": 20396
+      }
+    },
+    {
+      "scenario_id": 502,
+      "group": "P1",
+      "algorithm": "A1",
+      "algorithm_id": 1,
+      "trajectory": "F1",
+      "trajectory_id": 1,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 0,
+      "log_filename": "PHASE5_P1_S502_A1_F1_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S502_A1_F1_P050_Z20_REV14.hex",
+          "sha256": "D794E75900DC1F2802C3CD5AA0C1CFF3486781E3CC20975239B9B8C0691AE51F",
+          "bytes": 57418
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S502_A1_F1_P050_Z20_REV14.axf",
+          "sha256": "4C34FC1CA7D16A018631669B7DDB5E6F02F2DB3D4FE256375FCCE35AE60DAB0F",
+          "bytes": 93272
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S502_A1_F1_P050_Z20_REV14.map",
+          "sha256": "9C279AF68A8A18B933FD9CEAB03215E1322ACA7439C279F3E4C5D8B4D9B71710",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20392,
+        "rw_bytes": 5904,
+        "rom_bytes": 20396
+      }
+    },
+    {
+      "scenario_id": 503,
+      "group": "P1",
+      "algorithm": "A2",
+      "algorithm_id": 2,
+      "trajectory": "F1",
+      "trajectory_id": 1,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 160,
+      "log_filename": "PHASE5_P1_S503_A2_F1_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S503_A2_F1_P050_Z20_REV14.hex",
+          "sha256": "5A68E130CEA14BC1007D1E77657526F1E75BB0279389D08966136EFBB6EA578D",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S503_A2_F1_P050_Z20_REV14.axf",
+          "sha256": "DD946B44056767EFD1B18D4ED072DFD1E799A34AF442BEEF029C06508698C4D0",
+          "bytes": 93280
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S503_A2_F1_P050_Z20_REV14.map",
+          "sha256": "54F9F3EAF03FC400F235BC3003B1AEE4CC91F381001C188CABA46A4811E41EEF",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 504,
+      "group": "P1",
+      "algorithm": "A3",
+      "algorithm_id": 3,
+      "trajectory": "F1",
+      "trajectory_id": 1,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": null,
+      "log_filename": "PHASE5_P1_S504_A3_F1_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S504_A3_F1_P050_Z20_REV14.hex",
+          "sha256": "B293833C250C79F351EED1AD9DD630ABA269612B9CFDEB0A11518D286DC23E52",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S504_A3_F1_P050_Z20_REV14.axf",
+          "sha256": "9FE554E8CD4E255466E460123DFB8415FE9C782A146FAA6B8EED601E242A336F",
+          "bytes": 93276
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P1_S504_A3_F1_P050_Z20_REV14.map",
+          "sha256": "F12342B4C911BDEC1D14544C08C163A47439259A88447D4B8E706C542B47AB12",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 505,
+      "group": "P2",
+      "algorithm": "A2",
+      "algorithm_id": 2,
+      "trajectory": "F2",
+      "trajectory_id": 2,
+      "pli_amplitude": 0.2,
+      "pli_amplitude_u6": 200000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 160,
+      "log_filename": "PHASE5_P2_S505_A2_F2_P020_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S505_A2_F2_P020_Z20_REV14.hex",
+          "sha256": "50F2A96A9F5DA4F160FC9587F7D1A67C1E76DB9EA2C4213EB5551D869210E5BA",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S505_A2_F2_P020_Z20_REV14.axf",
+          "sha256": "1EA7CAB79687F25B46323D8A12ED3A440F8391FD1301723EE7640F7BE32C45EE",
+          "bytes": 93288
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S505_A2_F2_P020_Z20_REV14.map",
+          "sha256": "EAEB473EC2F5811974CCE73E566EBCC56DBBF9724E292DC60239D0B79706D6C8",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 506,
+      "group": "P2",
+      "algorithm": "A3",
+      "algorithm_id": 3,
+      "trajectory": "F2",
+      "trajectory_id": 2,
+      "pli_amplitude": 0.2,
+      "pli_amplitude_u6": 200000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": null,
+      "log_filename": "PHASE5_P2_S506_A3_F2_P020_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S506_A3_F2_P020_Z20_REV14.hex",
+          "sha256": "2EF2733A720B7880A1AE942C6D3872166D4A67A532E30C5777742F9B38F7FF2D",
+          "bytes": 57447
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S506_A3_F2_P020_Z20_REV14.axf",
+          "sha256": "48C6171CAB3F771DC47C91F858808D3752C0177A68DFB295DFE6992046C309CA",
+          "bytes": 93292
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S506_A3_F2_P020_Z20_REV14.map",
+          "sha256": "97CF94DF0DF4BDB52DFC90B4C9AF6B01E56180EE0451F029915AF94231275B1A",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20400,
+        "rw_bytes": 5904,
+        "rom_bytes": 20404
+      }
+    },
+    {
+      "scenario_id": 507,
+      "group": "P2",
+      "algorithm": "A2",
+      "algorithm_id": 2,
+      "trajectory": "F2",
+      "trajectory_id": 2,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 160,
+      "log_filename": "PHASE5_P2_S507_A2_F2_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S507_A2_F2_P050_Z20_REV14.hex",
+          "sha256": "35A7CA7C9AB1305C8789958DB98C95862C79FFD517057A330B8C2C3868DBCE87",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S507_A2_F2_P050_Z20_REV14.axf",
+          "sha256": "0BC8070072CA0D3FEE44B33FFF83EC4B750B3072FA9A618E3EFE1429DA59D329",
+          "bytes": 93288
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S507_A2_F2_P050_Z20_REV14.map",
+          "sha256": "292AE3B3EEF6AC632481298079890010B52968E5720CFB2BE27E9F65FF88936A",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 508,
+      "group": "P2",
+      "algorithm": "A3",
+      "algorithm_id": 3,
+      "trajectory": "F2",
+      "trajectory_id": 2,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": null,
+      "log_filename": "PHASE5_P2_S508_A3_F2_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S508_A3_F2_P050_Z20_REV14.hex",
+          "sha256": "1E61611975754F1F99415F7B3B3F783350A32E413A18AA05E7C88B1CED73D5D5",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S508_A3_F2_P050_Z20_REV14.axf",
+          "sha256": "CBFE49B93944C0F31BEECA7EE0A7E3AD5AFF6D20846FD70C1158BC6D75173D8F",
+          "bytes": 93288
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S508_A3_F2_P050_Z20_REV14.map",
+          "sha256": "D4215FCAADF5D06F31C4057B672FAD5FD38C8B4FA41E0274C59F9B2B75FDBE14",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 509,
+      "group": "P2",
+      "algorithm": "A2",
+      "algorithm_id": 2,
+      "trajectory": "F2",
+      "trajectory_id": 2,
+      "pli_amplitude": 1.0,
+      "pli_amplitude_u6": 1000000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 160,
+      "log_filename": "PHASE5_P2_S509_A2_F2_P100_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S509_A2_F2_P100_Z20_REV14.hex",
+          "sha256": "4CE3C211386BE787428EEB4ECD45DFC4604F7BF21AFF600F2CC7F86BC432FFB0",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S509_A2_F2_P100_Z20_REV14.axf",
+          "sha256": "59D43DB98385B134DB182761CFB7123DBF015F841E4F1C297D9F9E36985FBA7B",
+          "bytes": 93288
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S509_A2_F2_P100_Z20_REV14.map",
+          "sha256": "292AE3B3EEF6AC632481298079890010B52968E5720CFB2BE27E9F65FF88936A",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 510,
+      "group": "P2",
+      "algorithm": "A3",
+      "algorithm_id": 3,
+      "trajectory": "F2",
+      "trajectory_id": 2,
+      "pli_amplitude": 1.0,
+      "pli_amplitude_u6": 1000000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": null,
+      "log_filename": "PHASE5_P2_S510_A3_F2_P100_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S510_A3_F2_P100_Z20_REV14.hex",
+          "sha256": "156E66C6097160C3DBF461693B902E554E2FDD67BA8A51CFBB8BB2C388FCA106",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S510_A3_F2_P100_Z20_REV14.axf",
+          "sha256": "A539D7496829A5A2E977CF70B55988238B11CF2D544F24E2DD2C8B3E12143BDF",
+          "bytes": 93288
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P2_S510_A3_F2_P100_Z20_REV14.map",
+          "sha256": "D4215FCAADF5D06F31C4057B672FAD5FD38C8B4FA41E0274C59F9B2B75FDBE14",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 511,
+      "group": "P3",
+      "algorithm": "A2",
+      "algorithm_id": 2,
+      "trajectory": "F3",
+      "trajectory_id": 3,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": 160,
+      "log_filename": "PHASE5_P3_S511_A2_F3_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P3_S511_A2_F3_P050_Z20_REV14.hex",
+          "sha256": "B8F20D06BC3E09E8B1F75AD976CF192CBB75793C10A742E20382154F55A9D716",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P3_S511_A2_F3_P050_Z20_REV14.axf",
+          "sha256": "A2DC2400BC637B3C8B7E67BD448AA57D5C0B141E035795A876E35022980C0F75",
+          "bytes": 93288
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P3_S511_A2_F3_P050_Z20_REV14.map",
+          "sha256": "D4215FCAADF5D06F31C4057B672FAD5FD38C8B4FA41E0274C59F9B2B75FDBE14",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    },
+    {
+      "scenario_id": 512,
+      "group": "P3",
+      "algorithm": "A3",
+      "algorithm_id": 3,
+      "trajectory": "F3",
+      "trajectory_id": 3,
+      "pli_amplitude": 0.5,
+      "pli_amplitude_u6": 500000,
+      "noise": "snr20",
+      "noise_id": 1,
+      "near_line": "N0",
+      "near_line_id": 0,
+      "seed": 20260727,
+      "expected_sample_count": 8000,
+      "expected_block_rows": 160,
+      "expected_final_tracker_calls": null,
+      "log_filename": "PHASE5_P3_S512_A3_F3_P050_Z20_REV14.txt",
+      "artifacts": {
+        "hex": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P3_S512_A3_F3_P050_Z20_REV14.hex",
+          "sha256": "A5B57595B584D8548E84673BF14DBAF32BE033BE3CA503BFC3E96B5AF2352E14",
+          "bytes": 57426
+        },
+        "axf": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P3_S512_A3_F3_P050_Z20_REV14.axf",
+          "sha256": "3915198ED03CBEBFD76AE74D914524CA87CFBC4CFD59276D3A03E395DD08A793",
+          "bytes": 93276
+        },
+        "map": {
+          "path": "firmware\\stm32_keil\\build\\PHASE5_P3_S512_A3_F3_P050_Z20_REV14.map",
+          "sha256": "F12342B4C911BDEC1D14544C08C163A47439259A88447D4B8E706C542B47AB12",
+          "bytes": 20597
+        }
+      },
+      "memory": {
+        "ro_bytes": 20396,
+        "rw_bytes": 5904,
+        "rom_bytes": 20400
+      }
+    }
+  ],
+  "evidence_boundary": {
+    "binaries_built": true,
+    "proteus_logs_received": false,
+    "simulated_mcu_cycles_checked": false,
+    "physical_mcu_checked": false
+  }
+}

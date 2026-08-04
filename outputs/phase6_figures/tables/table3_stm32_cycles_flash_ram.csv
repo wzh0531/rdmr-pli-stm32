@@ -1,0 +1,5 @@
+﻿algorithm,scenario_count,cycles_mean_across_scenarios,cycles_mean_min,cycles_mean_max,cycles_p95_max,cycles_observed_max,tracker_calls_mean,rom_bytes_min,rom_bytes_max,rw_bytes_min,rw_bytes_max,realtime_pass_scenarios,resource_boundary
+A0,1,400.0,400,400,415,744,0.0,20460,20460,5904,5904,1,"whole unified firmware image, not isolated algorithm footprint"
+A1,1,1138.0,1138,1138,1157,2588,0.0,20460,20460,5904,5904,1,"whole unified firmware image, not isolated algorithm footprint"
+A2,5,329157.4,328738,329900,1162,17058357,160.0,20464,20464,5904,5904,0,"whole unified firmware image, not isolated algorithm footprint"
+A3,5,65560.4,43718,79292,1161,17061350,34.4,20464,20468,5904,5904,0,"whole unified firmware image, not isolated algorithm footprint"

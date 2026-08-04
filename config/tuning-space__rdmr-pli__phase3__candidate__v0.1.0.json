@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "Phase 3 host tuning",
+  "status": "candidate",
+  "protocol_id": "cssp-rdmr-pli-v0.3.0",
+  "design": "one_factor_at_a_time",
+  "algorithms": {
+    "candidate": "A3",
+    "paired_reference": "A2"
+  },
+  "validation_scenarios": {
+    "trajectories": [
+      "F1",
+      "F3",
+      "F4"
+    ],
+    "pli_amplitude": 0.5,
+    "noise": "snr_20_db",
+    "near_line": "N0",
+    "seeds": {
+      "start": 100,
+      "end": 109
+    }
+  },
+  "forbidden_evaluation_seeds": {
+    "start": 1000,
+    "end": 1029
+  },
+  "baseline_parameters": {
+    "interval_fast_blocks": 1,
+    "interval_mid_blocks": 3,
+    "interval_slow_blocks": 12,
+    "residual_new_weight": 0.15,
+    "threshold_scale": 1.0,
+    "block_size_samples": 50
+  },
+  "families": [
+    {
+      "name": "state_intervals",
+      "levels": [
+        [1, 2, 6],
+        [1, 3, 12],
+        [1, 4, 16]
+      ]
+    },
+    {
+      "name": "residual_new_weight",
+      "levels": [
+        0.05,
+        0.15,
+        0.3
+      ]
+    },
+    {
+      "name": "threshold_scale",
+      "levels": [
+        0.75,
+        1.0,
+        1.25
+      ]
+    },
+    {
+      "name": "block_size_samples",
+      "levels": [
+        25,
+        50,
+        100
+      ]
+    }
+  ],
+  "selection_rule": {
+    "quality_metric": "paired output_snr_db(A3)-output_snr_db(A2)",
+    "quality_gate": "paired bootstrap 95% CI lower bound > -0.5 dB",
+    "bootstrap_resamples": 20000,
+    "bootstrap_rng_seed": 20260728,
+    "performance_metric": "median host_tsc_ticks_per_sample",
+    "tie_break": "candidate_id lexical ascending",
+    "warning": "Host TSC timing is valid only for Phase-3 host ranking. It is not STM32 DWT evidence and tracker_calls is not substituted for processing time."
+  },
+  "expected_candidate_runs": 360,
+  "expected_reference_runs": 30
+}

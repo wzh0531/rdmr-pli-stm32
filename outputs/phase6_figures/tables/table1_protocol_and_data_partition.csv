@@ -1,0 +1,15 @@
+﻿section,item,value,provenance
+signal,sample_rate_hz,1000,protocol v0.3.0
+signal,samples_per_run,8000,protocol v0.3.0
+signal,duration_s,8,protocol v0.3.0
+signal,block_size_samples,50,phase3 freeze
+main_matrix,algorithms,"A0,A1,A2,A3",protocol v0.3.0
+main_matrix,frequency_trajectories,F0-F5,protocol v0.3.0
+main_matrix,pli_amplitudes,"0.20,0.50,1.00",protocol v0.3.0
+main_matrix,noise_levels,"none,20 dB,10 dB",protocol v0.3.0
+main_matrix,frozen_test_seeds,1000-1029,phase4 completion manifest
+main_matrix,run_count,6480,phase4 completion manifest
+near_line,cases,"N0,N1(42Hz),N2(58Hz),N3(42+58Hz)",protocol v0.3.0
+near_line,run_count,1440,phase4 completion manifest
+ablation,run_count,360,phase3 freeze
+physical,matrix,12 scenarios x 3 cold starts,phase5 validation

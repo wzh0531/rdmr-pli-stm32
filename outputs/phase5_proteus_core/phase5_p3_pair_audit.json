@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FAIL_REALTIME",
+  "comparison": "P3 S512/A3 vs S511/A2; F3, PLI=0.50, 20 dB, near-line N0, seed=20260727",
+  "per_algorithm": [
+    {
+      "scenario_id": 511,
+      "algorithm": "A2",
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P3_S511_A2_F3_P050_Z20_REV14.txt",
+      "log_sha256": "9D919578771E21322FD0B81F360E90103AB732952137F453D330FB8D177275FF",
+      "rows": 160,
+      "proteus_output_snr_db": 15.81787218992588,
+      "host_output_snr_db": 15.818384631781532,
+      "output_snr_absolute_difference_db": 0.0005124418556512467,
+      "proteus_endpoint_frequency_mae_hz": 0.08052499999999974,
+      "host_endpoint_frequency_mae_hz": 0.0805014818906784,
+      "frequency_mae_absolute_difference_hz": 2.3518109321329916e-05,
+      "proteus_final_tracker_calls": 160,
+      "host_final_tracker_calls": 160,
+      "tracker_calls_absolute_difference": 0,
+      "endpoint_state_mismatches": 0,
+      "endpoint_state_mismatch_n": [],
+      "cycles_mean": 581240,
+      "cycles_p95": 2097,
+      "cycles_max": 30168875,
+      "deadline_violations": 159,
+      "tracker_cycles_mean": 28962190,
+      "numeric_faults": 0
+    },
+    {
+      "scenario_id": 512,
+      "algorithm": "A3",
+      "log": "outputs\\phase5_proteus_core\\logs\\PHASE5_P3_S512_A3_F3_P050_Z20_REV14.txt",
+      "log_sha256": "3ADC3B02798A43F60BCF2F3992807782D054D8FE84973CD2596DB5708897923A",
+      "rows": 160,
+      "proteus_output_snr_db": 15.048693680109974,
+      "host_output_snr_db": 15.248040848512005,
+      "output_snr_absolute_difference_db": 0.19934716840203137,
+      "proteus_endpoint_frequency_mae_hz": 0.19341875000000003,
+      "host_endpoint_frequency_mae_hz": 0.17108289897441864,
+      "frequency_mae_absolute_difference_hz": 0.022335851025581388,
+      "proteus_final_tracker_calls": 22,
+      "host_final_tracker_calls": 24,
+      "tracker_calls_absolute_difference": 2,
+      "endpoint_state_mismatches": 13,
+      "endpoint_state_mismatch_n": [
+        2950,
+        3000,
+        3050,
+        3100,
+        3150,
+        3200,
+        5950,
+        6000,
+        6050,
+        6100,
+        6150,
+        6200,
+        6250
+      ],
+      "cycles_mean": 69979,
+      "cycles_p95": 2079,
+      "cycles_max": 29783335,
+      "deadline_violations": 21,
+      "tracker_cycles_mean": 24703374,
+      "numeric_faults": 0
+    }
+  ],
+  "a3_vs_a2": {
+    "output_snr_difference_db": -0.769178509815907,
+    "mean_cycles_reduction_fraction": 0.8796039501754869,
+    "tracker_calls_reduction_fraction": 0.8625,
+    "deadline_violation_reduction_fraction": 0.8679245283018868
+  },
+  "gates": {
+    "log_integrity": "PASS",
+    "numeric_faults": "PASS",
+    "host_proteus_output_snr_le_0.10_db": "FAIL",
+    "host_proteus_endpoint_frequency_mae_le_0.05_hz": "PASS",
+    "tracker_calls_difference_le_1": "FAIL",
+    "state_sequence": "WARN: up to 13/160 endpoint mismatches",
+    "a3_mean_cycles_below_a2": "PASS",
+    "maximum_sample_below_72000_cycles": "FAIL",
+    "zero_deadline_violations": "FAIL"
+  },
+  "evidence_boundary": {
+    "cycle_source": "Proteus simulated MCU DWT",
+    "physical_mcu_measurement": false,
+    "power_or_energy_measurement": false,
+    "frozen_parameters_changed": false
+  }
+}

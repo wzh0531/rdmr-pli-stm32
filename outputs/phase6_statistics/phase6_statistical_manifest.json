@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS_WITH_REPORTED_NEGATIVE_RESULTS",
+  "script": {
+    "path": "simulation\\golden_model\\run_phase6_statistics.py",
+    "sha256": "3CB791A58F4939612AA151EA59C08C1FF0A3E9D35AE6623D0BB6C3030E0DFDF0"
+  },
+  "inputs": [
+    {
+      "path": "outputs\\phase4_host\\phase4_run_metrics.csv",
+      "sha256": "C8BB0E61B555C37B5248EF39BCF101E8A32242D673B8A09402F5C63158666A41"
+    },
+    {
+      "path": "outputs\\phase4_host\\phase4_completion_manifest.json",
+      "sha256": "DF8AD76CE195EC824BEE670A3973380C5A8A316B0D708A67B64315CEB2CBC759"
+    },
+    {
+      "path": "outputs\\phase4_host\\phase4_validation_and_grouped_summary.json",
+      "sha256": "FF0041BA7D014A6C952BDD876821027F91F2305B9D6680E3A795AB824A6EC459"
+    },
+    {
+      "path": "outputs\\phase5_physical_core\\phase5_physical_core_gate_summary.json",
+      "sha256": "A2346B2BCCBC9F574181ED191BF2A52C349AEFD1907EC062CD49CD4CF2F9853A"
+    },
+    {
+      "path": "outputs\\phase3_tuning\\phase3_candidate_runs.csv",
+      "sha256": "F1956CE760881BDCDAA6F25511EB8D903202CD7C37E081977D9A540097C15470"
+    },
+    {
+      "path": "outputs\\phase3_tuning\\phase3_candidate_summary.csv",
+      "sha256": "0CA918554D5D7A5E2933962508DE9F0E9F8BCF5E468B6B503473282889374FE9"
+    },
+    {
+      "path": "paper_workspace\\scope\\experiment-protocol__rdmr-pli__cssp-journal__candidate__v0.3.0.md",
+      "sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs\\phase6_statistics\\phase6_paired_statistics.json",
+      "sha256": "5EB796DD8EF92F9069E47C2AF6E8383B9C50E9893A9BC5376F4CDF0AE1E952C9",
+      "bytes": 20085
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_main_algorithm_summary.csv",
+      "sha256": "DEFF474DEDA0249943E8DDB8011DA0CC34321CAA4D2E1881724F7130F0C3F253",
+      "bytes": 3680
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_a3_vs_a2_paired_metrics.csv",
+      "sha256": "49E7856C3D1A1E706C3CED411174AB9CF6EAE4106A939E02241B0A6E0C7743C0",
+      "bytes": 3312
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_holm_by_trajectory.csv",
+      "sha256": "A28BE234D20E01745DA949260BDE59182DC43FF15B74CBBB741019C8D9A128FE",
+      "bytes": 2143
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_near_line_summary.csv",
+      "sha256": "0750A5AF268A3E4F421031AFEBE56A11C5E064B092EACE32E91B9EC23053A924",
+      "bytes": 9370
+    },
+    {
+      "path": "outputs\\phase6_statistics\\phase6_ablation_summary.csv",
+      "sha256": "0966CC1934AD12DE2ED33395D3B845DC2E31942FEEB249AC38516A2121C20431",
+      "bytes": 3159
+    },
+    {
+      "path": "paper_workspace\\reviews\\quantitative-audit__rdmr-pli__phase6-statistics__candidate__v1.0.0.md",
+      "sha256": "40551FD38DA9B68C2A4ECCA806C38F9E7BA19C932EBF6096F512F8BACBC5F2E2",
+      "bytes": 5064
+    }
+  ],
+  "frozen_hash_assertions": {
+    "protocol_sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933",
+    "ei_draft_sha256": "629A01139433FBA0E07191C64263D02EF7EDEE8CBFE237C9D1419FE630BDF287",
+    "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
+  },
+  "gates": {
+    "phase4_completion_and_validation": "PASS",
+    "main_6480_and_near_1440_rows": "PASS",
+    "four_algorithms_per_paired_input": "PASS",
+    "paired_input_sha256_identity": "PASS",
+    "a3_vs_a2_1620_pairs": "PASS",
+    "all_main_numeric_metrics_finite": "PASS",
+    "ablation_360_rows_finite": "PASS",
+    "overall_snr_noninferiority_ci_lower_gt_minus_0p5_db": "PASS",
+    "all_six_trajectory_snr_noninferiority": "PASS",
+    "holm_adjustment_six_trajectory_family": "PASS",
+    "effect_sizes_reported": "PASS",
+    "settling_time_metric": "NOT_CHECKED",
+    "residual_50hz_band_energy_metric": "NOT_CHECKED",
+    "phase5_hard_realtime_1khz": "FAIL"
+  }
+}
