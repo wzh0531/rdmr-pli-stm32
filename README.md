@@ -5,8 +5,9 @@ This repository contains the source code, frozen configuration, derived host res
 > Zihan Wang, “Residual-Driven Multirate Frequency Tracking for Power-Line Interference Cancellation on STM32: A Performance-Overhead Study.”
 
 Canonical repository: <https://github.com/wzh0531/rdmr-pli-stm32>. Its
-visibility remains private while release-policy and clean-clone checks are
-pending.
+visibility remains private pending the author's final approval for the exact
+public file list and visibility change. The official-policy refresh and
+authenticated clean-clone checks are complete.
 
 ## Scope
 
@@ -101,6 +102,10 @@ See [`docs/known_validation_notes.md`](docs/known_validation_notes.md) for the l
 ## Citation
 
 Citation metadata are provided in [`CITATION.cff`](CITATION.cff). Add the final article DOI and GitHub/archival DOI after they are assigned.
+
+The GitHub repository is the canonical development source. A tagged release may
+also be archived in a DOI-granting repository so that the manuscript can cite an
+immutable version; the archival DOI is recommended but has not yet been minted.
 
 ## License
 

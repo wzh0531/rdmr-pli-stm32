@@ -1,13 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "status": "candidate_private_remote_verified_pending_policy_refresh_and_final_approval",
+  "status": "candidate_private_remote_verified_policy_refreshed_pending_final_approval",
   "repository_name": "rdmr-pli-stm32",
   "repository_url": "https://github.com/wzh0531/rdmr-pli-stm32",
   "repository_visibility_verified": "private",
   "repository_initial_state_verified": "empty",
   "remote_initial_verified_commit": "1c6c3154d3654aca5789c47598a1aaa4d0603469",
+  "remote_pre_policy_refresh_verified_commit": "8bab9f80b40f6bb347ef55b6421d3300f607d376",
   "version": "1.0.0-candidate",
   "prepared_at_local": "2026-08-04",
+  "policy_refreshed_at_local": "2026-08-11",
   "author": {
     "name": "Zihan Wang",
     "orcid": "0009-0004-7660-158X",
@@ -15,7 +17,7 @@
   },
   "package": {
     "released_file_count_excluding_sha256sums": 181,
-    "released_bytes_excluding_sha256sums": 11658371,
+    "released_bytes_excluding_sha256sums": 11659199,
     "approximate_size_mib_excluding_sha256sums": 11.12,
     "package_plan": "paper_workspace/delivery/package-plan__github-rdmr-pli-stm32__candidate__v1.0.0.md"
   },
@@ -51,7 +53,8 @@
     "citation_cff_yaml_parse": "PASS",
     "historical_phase3_whole_file_hash_gate": "FAIL_VISIBLE_PARAMETER_FINGERPRINT_MATCHES",
     "clean_clone_test": "PASS_COMMIT_1C6C3154D3654ACA5789C47598A1AAA4D0603469",
-    "current_cssp_repository_preprint_policy": "NOT_CHECKED",
+    "current_cssp_repository_preprint_policy": "PASS_WITH_CONDITIONS_RELEASE_JUST_BEFORE_SUBMISSION",
+    "current_cssp_submission_portal": "FAIL_UNDER_DEVELOPMENT_DO_NOT_USE_FOR_LIVE_SUBMISSION",
     "reuse_license": "PASS_MIT_AND_CC_BY_4_0",
     "frozen_ei_draft_publication": "PASS_EXCLUDED_BY_AUTHOR_DECISION",
     "repository_locator": "PASS_PRIVATE_URL_RECORDED",
@@ -65,7 +68,9 @@
     "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
   },
   "release_blockers": [
-    "refresh the target journal's current public-repository/preprint policy",
     "obtain final author approval"
+  ],
+  "submission_blockers": [
+    "confirm a usable official CSSP submission route"
   ]
 }
