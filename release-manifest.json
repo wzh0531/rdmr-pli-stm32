@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "status": "candidate_private_remote_verified_policy_refreshed_pending_final_approval",
+  "status": "candidate_private_remote_verified_policy_refreshed_public_release_approved",
   "repository_name": "rdmr-pli-stm32",
   "repository_url": "https://github.com/wzh0531/rdmr-pli-stm32",
   "repository_visibility_verified": "private",
@@ -10,6 +10,7 @@
   "version": "1.0.0-candidate",
   "prepared_at_local": "2026-08-04",
   "policy_refreshed_at_local": "2026-08-11",
+  "final_public_release_approved_at_local": "2026-08-11",
   "author": {
     "name": "Zihan Wang",
     "orcid": "0009-0004-7660-158X",
@@ -17,7 +18,7 @@
   },
   "package": {
     "released_file_count_excluding_sha256sums": 181,
-    "released_bytes_excluding_sha256sums": 11659199,
+    "released_bytes_excluding_sha256sums": 11659447,
     "approximate_size_mib_excluding_sha256sums": 11.12,
     "package_plan": "paper_workspace/delivery/package-plan__github-rdmr-pli-stm32__candidate__v1.0.0.md"
   },
@@ -59,8 +60,8 @@
     "frozen_ei_draft_publication": "PASS_EXCLUDED_BY_AUTHOR_DECISION",
     "repository_locator": "PASS_PRIVATE_URL_RECORDED",
     "private_repository_push": "PASS",
-    "public_github_url": "NOT_PUBLIC_PRIVATE_REPOSITORY",
-    "final_author_file_list_approval": "OPEN"
+    "public_github_url": "APPROVED_PENDING_VISIBILITY_CHANGE",
+    "final_author_file_list_approval": "PASS_APPROVED_2026_08_11"
   },
   "frozen_hash_assertions": {
     "protocol_sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933",
@@ -68,7 +69,7 @@
     "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
   },
   "release_blockers": [
-    "obtain final author approval"
+    "complete visibility change and logged-out public-access verification"
   ],
   "submission_blockers": [
     "confirm a usable official CSSP submission route"

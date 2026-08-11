@@ -12,5 +12,6 @@
 - [x] Add the private repository URL to `CITATION.cff` and `release-manifest.json`.
 - [x] Record the canonical GitHub locator in the candidate manuscript availability statements.
 - [ ] Optionally archive a tagged GitHub release in a DOI-granting repository and add that DOI.
-- [ ] Obtain final author approval before changing repository visibility to public.
+- [x] Obtain final author approval before changing repository visibility to public (2026-08-11).
+- [ ] Change repository visibility to public and verify logged-out access.
 - [ ] Verify the official CSSP submission route; the current Editorial Manager page warns against live submission.
