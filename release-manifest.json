@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "status": "candidate_private_remote_verified_policy_refreshed_public_release_approved",
+  "status": "public_release_verified",
   "repository_name": "rdmr-pli-stm32",
   "repository_url": "https://github.com/wzh0531/rdmr-pli-stm32",
-  "repository_visibility_verified": "private",
+  "repository_visibility_verified": "public",
   "repository_initial_state_verified": "empty",
   "remote_initial_verified_commit": "1c6c3154d3654aca5789c47598a1aaa4d0603469",
   "remote_pre_policy_refresh_verified_commit": "8bab9f80b40f6bb347ef55b6421d3300f607d376",
@@ -11,6 +11,7 @@
   "prepared_at_local": "2026-08-04",
   "policy_refreshed_at_local": "2026-08-11",
   "final_public_release_approved_at_local": "2026-08-11",
+  "public_access_verified_at_local": "2026-08-12",
   "author": {
     "name": "Zihan Wang",
     "orcid": "0009-0004-7660-158X",
@@ -18,7 +19,7 @@
   },
   "package": {
     "released_file_count_excluding_sha256sums": 181,
-    "released_bytes_excluding_sha256sums": 11659447,
+    "released_bytes_excluding_sha256sums": 11659345,
     "approximate_size_mib_excluding_sha256sums": 11.12,
     "package_plan": "paper_workspace/delivery/package-plan__github-rdmr-pli-stm32__candidate__v1.0.0.md"
   },
@@ -58,9 +59,9 @@
     "current_cssp_submission_portal": "FAIL_UNDER_DEVELOPMENT_DO_NOT_USE_FOR_LIVE_SUBMISSION",
     "reuse_license": "PASS_MIT_AND_CC_BY_4_0",
     "frozen_ei_draft_publication": "PASS_EXCLUDED_BY_AUTHOR_DECISION",
-    "repository_locator": "PASS_PRIVATE_URL_RECORDED",
+    "repository_locator": "PASS_PUBLIC_URL_VERIFIED",
     "private_repository_push": "PASS",
-    "public_github_url": "APPROVED_PENDING_VISIBILITY_CHANGE",
+    "public_github_url": "PASS_LOGGED_OUT_ACCESS_VERIFIED_2026_08_12",
     "final_author_file_list_approval": "PASS_APPROVED_2026_08_11"
   },
   "frozen_hash_assertions": {
@@ -68,9 +69,7 @@
     "ei_draft_sha256": "629A01139433FBA0E07191C64263D02EF7EDEE8CBFE237C9D1419FE630BDF287",
     "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
   },
-  "release_blockers": [
-    "complete visibility change and logged-out public-access verification"
-  ],
+  "release_blockers": [],
   "submission_blockers": [
     "confirm a usable official CSSP submission route"
   ]
