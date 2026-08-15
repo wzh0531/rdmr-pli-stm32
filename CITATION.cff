@@ -7,7 +7,7 @@ authors:
     given-names: "Zihan"
     orcid: "https://orcid.org/0009-0004-7660-158X"
     affiliation: "School of Electronic and Information Engineering, Hebei University of Technology"
-version: 1.1.1
+version: 1.1.2
 date-released: 2026-08-15
 license: MIT
 repository-code: "https://github.com/wzh0531/rdmr-pli-stm32"

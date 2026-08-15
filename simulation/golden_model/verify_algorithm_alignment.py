@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import tempfile
 
 import numpy as np
 
@@ -16,7 +17,6 @@ from signal_protocol import ExperimentConfig, generate_signal
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_DIR = ROOT / "outputs" / "phase2_acceptance"
-C_EXE = OUTPUT_DIR / "dump_algorithm_alignment.exe"
 C_CSV = OUTPUT_DIR / "c_algorithm_alignment.csv"
 PYTHON_CSV = OUTPUT_DIR / "python_algorithm_alignment.csv"
 REPORT = OUTPUT_DIR / "algorithm_alignment_report.json"
@@ -48,33 +48,35 @@ def build_and_run_c() -> None:
         raise RuntimeError("gcc is required for algorithm alignment")
     core = ROOT / "firmware" / "core"
     source = ROOT / "firmware" / "host_test" / "dump_algorithm_alignment.c"
-    subprocess.run(
-        [
-            compiler,
-            "-std=c99",
-            "-O2",
-            "-Wall",
-            "-Wextra",
-            str(source),
-            str(core / "rdmr_algorithm.c"),
-            str(core / "rdmr_pli.c"),
-            str(core / "rdmr_signal_protocol.c"),
-            str(core / "rdmr_trig.c"),
-            "-I",
-            str(core),
-            "-lm",
-            "-o",
-            str(C_EXE),
-        ],
-        check=True,
-    )
-    result = subprocess.run(
-        [str(C_EXE)],
-        check=True,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-    )
+    with tempfile.TemporaryDirectory(prefix="rdmr-alignment-") as temp_dir:
+        executable = Path(temp_dir) / "dump_algorithm_alignment.exe"
+        subprocess.run(
+            [
+                compiler,
+                "-std=c99",
+                "-O2",
+                "-Wall",
+                "-Wextra",
+                str(source),
+                str(core / "rdmr_algorithm.c"),
+                str(core / "rdmr_pli.c"),
+                str(core / "rdmr_signal_protocol.c"),
+                str(core / "rdmr_trig.c"),
+                "-I",
+                str(core),
+                "-lm",
+                "-o",
+                str(executable),
+            ],
+            check=True,
+        )
+        result = subprocess.run(
+            [str(executable)],
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
     C_CSV.write_text(result.stdout, encoding="utf-8", newline="")
 
 
