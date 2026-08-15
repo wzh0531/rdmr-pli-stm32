@@ -124,7 +124,7 @@ See [`docs/known_validation_notes.md`](docs/known_validation_notes.md) for the l
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The immutable Phase 8 repository version is tagged `phase8-v1.0.0`. Add the final article DOI and archival DOI after they are assigned.
+Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The verified immutable Phase 8 repository version is tagged `phase8-v1.0.1`; it supersedes `phase8-v1.0.0`, whose public-clone audit exposed one checksum-listed host executable that had been excluded by the historical ignore rule. Add the final article DOI and archival DOI after they are assigned.
 
 The GitHub repository is the canonical development source. A tagged release may
 also be archived in a DOI-granting repository so that the manuscript can cite an
