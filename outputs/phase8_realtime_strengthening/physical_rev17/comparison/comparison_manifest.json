@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "status": "BUILT_NOT_RUN",
+  "protocol": "cssp-rdmr-pli-v0.5.0",
+  "implementation": "0.4.1",
+  "firmware_revision": 17,
+  "reference_passed_run": {
+    "scenario_id": 804,
+    "algorithm": 3,
+    "search_mode": 1,
+    "raw_log_sha256": "51C93DACDB0157E05B261769F9F3568B57843CD7847662009688D3FE614E6B13",
+    "block_cycles_max": 2775151,
+    "realtime_verdict": "PASS_TARGET_20_PERCENT_MARGIN"
+  },
+  "run_order": [805, 806, 807],
+  "scenarios": [
+    {
+      "scenario_id": 805,
+      "algorithm": 3,
+      "search_mode": 0,
+      "purpose": "A3 exhaustive 201-point baseline",
+      "hex": "PHASE8_REV17_S805_A3_F4_P020_Z0_SEARCH0.hex",
+      "hex_sha256": "FBA1009D1731D690F4A896E73E21872AAEF9E078C5B908A254D9224BF847555E",
+      "expected_log": "S805_run1.txt"
+    },
+    {
+      "scenario_id": 806,
+      "algorithm": 7,
+      "search_mode": 1,
+      "purpose": "B4 two-state hierarchical-search comparator",
+      "hex": "PHASE8_REV17_S806_B4_F4_P020_Z0_SEARCH1.hex",
+      "hex_sha256": "74123FE2D05713B547C9C6AB255A38D1708E9312D46BA22632DA22655614CD01",
+      "expected_log": "S806_run1.txt"
+    },
+    {
+      "scenario_id": 807,
+      "algorithm": 2,
+      "search_mode": 1,
+      "purpose": "A2 full-rate hierarchical-search comparator",
+      "hex": "PHASE8_REV17_S807_A2_F4_P020_Z0_SEARCH1.hex",
+      "hex_sha256": "BE68B4A0613927DC2F49815CD78719C8D83C280FC43DDD9FB9BF9D1E41007BB6",
+      "expected_log": "S807_run1.txt"
+    }
+  ],
+  "common_configuration": {
+    "trajectory": 4,
+    "pli_amplitude": 0.2,
+    "noise": 0,
+    "near_line": 0,
+    "seed": 1000,
+    "sample_count": 8000,
+    "block_size": 50,
+    "sample_deadline_cycles": 72000,
+    "block_deadline_cycles": 3600000
+  }
+}

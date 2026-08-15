@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FIVE_BOUNDARY_LOGS_VALIDATED",
+  "structural_pass_count": 5,
+  "target_timing_pass_count": 5,
+  "high_activity_boundary": {
+    "condition": "F4, PLI 1.00, no added noise, seed 1020",
+    "A3": {"scenario": 808, "searches": 143, "evaluations": 4576, "state_counts": {"0": 140, "1": 12, "2": 8}, "mean_cycles": 2411423, "p95_cycles": 2757205, "max_cycles": 2786472, "output_snr_db": 10.957872261557295},
+    "B4": {"scenario": 809, "searches": 129, "evaluations": 4128, "state_counts": {"0": 130, "1": 0, "2": 30}, "mean_cycles": 2176059, "p95_cycles": 2755578, "max_cycles": 2786322, "output_snr_db": 10.93267002379434},
+    "A2": {"scenario": 810, "searches": 159, "evaluations": 5088, "state_counts": {"0": 160, "1": 0, "2": 0}, "mean_cycles": 2679621, "p95_cycles": 2757102, "max_cycles": 2786435, "output_snr_db": 10.970473200030998},
+    "A3_minus_B4": {"output_snr_db": 0.025202237762955, "searches": 14, "mean_cycles": 235364},
+    "A3_minus_A2": {"output_snr_db": -0.012600938473703, "searches": -16, "mean_cycles": -268198, "search_reduction_percent": 10.062893081761, "mean_cycle_reduction_percent": 10.0088034837763},
+    "bounded_conclusion": "Even at 143 A3 searches in 160 blocks, all three algorithms stayed below the 2.88 M-cycle target. A3 offered only 0.025 dB over B4 and only 10.0% mean-cycle saving versus A2 in this high-activity condition."
+  },
+  "unfavorable_quality_boundary": {
+    "condition": "F0, PLI 0.20, no added noise, seed 1007",
+    "A3": {"scenario": 811, "searches": 14, "evaluations": 448, "state_counts": {"0": 2, "1": 3, "2": 155}, "mean_cycles": 273344, "p95_cycles": 2747160, "max_cycles": 2764456, "output_snr_db": 22.08733991235224},
+    "B4": {"scenario": 812, "searches": 13, "evaluations": 416, "state_counts": {"0": 0, "1": 0, "2": 160}, "mean_cycles": 275878, "p95_cycles": 2746160, "max_cycles": 2771801, "output_snr_db": 22.383797611434893},
+    "A3_minus_B4": {"output_snr_db": -0.296457699082653, "searches": 1, "mean_cycles": -2534},
+    "bounded_conclusion": "The preselected unfavorable boundary reproduced an approximately -0.296 dB A3-minus-B4 output-SNR difference. This result must be reported as a counterexample to any universal A3 superiority claim."
+  }
+}

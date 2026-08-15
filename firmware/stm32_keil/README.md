@@ -58,11 +58,12 @@ $env:ARMCC_BIN = 'C:\path\to\Keil\ARM\ARMCC\bin'
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\build_armcc.ps1 `
-  -Algorithm A3 -Trajectory F1 -Noise none -Seed 0
+  -Algorithm A3 -Trajectory F1 -Noise none -Seed 0 -TrackerSearchMode 1
 ```
 
-Supported algorithms are A0-A3, trajectories F0-F5, and noise settings
-`none`, `snr20`, and `snr10`.
+Supported algorithms are A0-A3 and B1-B4, trajectories F0-F5, search modes
+0 (exhaustive) and 1 (hierarchical), and noise settings `none`, `snr20`, and
+`snr10`.
 
 ## Building A0-A3
 
@@ -88,7 +89,7 @@ Assign the selected `.hex` file from `build\` to the MCU Program File.
 ## Physical-board clock
 
 The non-Proteus path uses an 8 MHz HSE multiplied by 9 for a 72 MHz core.
-The released physical evidence contains 36 UART logs from an STM32F103C8T6:
-12 scenarios with three cold starts per scenario. These runs validate the
-internally generated benchmark, telemetry, scheduler state, and DWT timing;
-they do not validate an ADC, sensor, or analog front end.
+The release contains the original 36 physical UART logs and the 17-log Rev17
+Phase 8 timing set. These runs validate the internally generated benchmark,
+telemetry, scheduler state, and DWT timing on an STM32F103C8T6. They do not
+validate ADC/DMA streaming, a sensor, or an analog front end.

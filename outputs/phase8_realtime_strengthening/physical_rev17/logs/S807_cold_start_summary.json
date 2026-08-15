@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "status": "THREE_CAPTURES_VALIDATED",
+  "scenario_id": 807,
+  "algorithm": "A2",
+  "search_mode": "hierarchical-32",
+  "capture_provenance": {
+    "run1": {"file": "S807_run1.txt", "sha256": "73233239488C32070B386FE4B0EC5EE836C3A5E31275BAA52B9D548AAF93D0E2"},
+    "run2": {"file": "S807_run2.txt", "source_modified": "2026-08-14T15:35:05.2529308+08:00", "sha256": "73233239488C32070B386FE4B0EC5EE836C3A5E31275BAA52B9D548AAF93D0E2"},
+    "run3": {"file": "S807_run3.txt", "source_modified": "2026-08-14T15:35:31.4947414+08:00", "sha256": "73233239488C32070B386FE4B0EC5EE836C3A5E31275BAA52B9D548AAF93D0E2"}
+  },
+  "machine_validation": {
+    "passed_captures": 3,
+    "rows_per_capture": 160,
+    "tracker_searches_per_capture": [159, 159, 159],
+    "grid_evaluations_per_capture": [5088, 5088, 5088],
+    "block_deadline_violations_per_capture": [0, 0, 0],
+    "block_cycles_mean_per_capture": [2688587, 2688587, 2688587],
+    "block_cycles_p95_per_capture": [2768252, 2768252, 2768252],
+    "block_cycles_max_per_capture": [2776280, 2776280, 2776280],
+    "maximum_cycle_mean": 2776280,
+    "maximum_cycle_range": 0,
+    "maximum_cycle_standard_deviation": 0,
+    "maximum_cycle_cv_percent": 0,
+    "all_meet_target_2880000": true
+  },
+  "provenance_boundary": "The three author-provided files have distinct capture filenames/timestamps but byte-identical deterministic UART payloads and a firmware run_id fixed at 1; independent power cycles are human-provided acquisition provenance.",
+  "bounded_conclusion": "Across the three provided A2 captures, 159 searches and a 2.776 M-cycle maximum were exactly reproduced, with no 50 ms block-budget violations."
+}

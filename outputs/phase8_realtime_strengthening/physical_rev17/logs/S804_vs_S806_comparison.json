@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS_COMPARABLE_PAIR",
+  "comparison_scope": "same Rev17 implementation 0.4.1, board class, F4 input, PLI 0.20, no added noise, seed 1000 and 32-point search; scheduler differs",
+  "A3": {
+    "scenario_id": 804,
+    "state_block_counts": {"0": 19, "1": 35, "2": 106},
+    "tracker_searches": 34,
+    "grid_evaluations": 1088,
+    "block_cycles_mean": 595206,
+    "block_cycles_p95": 2758248,
+    "block_cycles_max": 2775151,
+    "block_deadline_violations": 0,
+    "output_snr_db": 20.073059758354475
+  },
+  "B4": {
+    "scenario_id": 806,
+    "state_block_counts": {"0": 21, "1": 0, "2": 139},
+    "tracker_searches": 29,
+    "grid_evaluations": 928,
+    "block_cycles_mean": 546288,
+    "block_cycles_p95": 2760942,
+    "block_cycles_max": 2782185,
+    "block_deadline_violations": 0,
+    "output_snr_db": 19.829419090581915
+  },
+  "A3_minus_B4": {
+    "output_snr_db": 0.24364066777256,
+    "tracker_searches": 5,
+    "grid_evaluations": 160,
+    "mean_block_cycles": 48918,
+    "mean_block_cycles_percent_of_B4": 8.95461734469731,
+    "p95_block_cycles": -2694,
+    "maximum_block_cycles": -7034,
+    "maximum_block_cycles_percent_of_B4": -0.252822871232505
+  },
+  "bounded_conclusion": "In this single frozen F4 condition, A3 used five more searches and 8.95% more mean block cycles than B4, but improved output SNR by 0.244 dB. Both met the 20%-margin timing target, and their worst block cycles were effectively equivalent within 0.26%. This condition alone cannot establish an across-condition A3 advantage."
+}

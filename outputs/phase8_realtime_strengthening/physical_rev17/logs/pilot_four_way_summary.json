@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PILOT_COMPLETE_REPEATS_PENDING",
+  "protocol": "cssp-rdmr-pli-v0.5.0",
+  "implementation": "0.4.1",
+  "firmware_revision": 17,
+  "common_condition": "F4, PLI 0.20, no added noise, seed 1000, 8000 samples, 50-sample blocks, 72 MHz STM32F103",
+  "runs": [
+    {"scenario": 804, "algorithm": "A3", "search": "hierarchical-32", "searches": 34, "evaluations": 1088, "mean_cycles": 595206, "p95_cycles": 2758248, "max_cycles": 2775151, "block_violations": 0, "output_snr_db": 20.073059758354475, "verdict": "PASS_TARGET_20_PERCENT_MARGIN"},
+    {"scenario": 805, "algorithm": "A3", "search": "exhaustive-201", "searches": 34, "evaluations": 6834, "mean_cycles": 3416318, "p95_cycles": 16922784, "max_cycles": 17034581, "block_violations": 34, "output_snr_db": 20.073059758354475, "verdict": "FAIL_HARD_BLOCK_BUDGET"},
+    {"scenario": 806, "algorithm": "B4", "search": "hierarchical-32", "searches": 29, "evaluations": 928, "mean_cycles": 546288, "p95_cycles": 2760942, "max_cycles": 2782185, "block_violations": 0, "output_snr_db": 19.829419090581915, "verdict": "PASS_TARGET_20_PERCENT_MARGIN"},
+    {"scenario": 807, "algorithm": "A2", "search": "hierarchical-32", "searches": 159, "evaluations": 5088, "mean_cycles": 2688587, "p95_cycles": 2768252, "max_cycles": 2776280, "block_violations": 0, "output_snr_db": 21.539334969741198, "verdict": "PASS_TARGET_20_PERCENT_MARGIN"}
+  ],
+  "confirmed": [
+    "The 32-point search changes A3 from a 4.73x hard-budget failure to a 20%-margin pass in the frozen condition.",
+    "A3 and B4 both pass; A3 uses more average compute and improves output SNR by 0.244 dB in this condition.",
+    "A3 and A2 have essentially equal maximum block latency under the same 32-point search; A3 reduces mean cycles by 77.86% and loses 1.466 dB output SNR."
+  ],
+  "not_yet_confirmed": [
+    "cold-start dispersion",
+    "cross-trajectory timing and scheduler behavior",
+    "sustained ADC/DMA end-to-end real-time operation",
+    "power or energy reduction"
+  ]
+}

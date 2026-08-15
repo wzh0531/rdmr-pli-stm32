@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "log_path": "outputs/phase8_realtime_strengthening/physical_rev17/logs/S807_run1.txt",
+  "metadata": {
+    "implementation": "0.4.1",
+    "firmware_revision": 17,
+    "scenario_id": 807,
+    "algorithm": 2,
+    "search_mode": 1,
+    "points_per_search": 32,
+    "seed": 1000
+  },
+  "rows": 160,
+  "tracker": {
+    "calls": 160,
+    "searches": 159,
+    "grid_evaluations": 5088
+  },
+  "timing": {
+    "sample_deadline": 72000,
+    "sample_deadline_violations": 159,
+    "sample_cycles_max": 2720617,
+    "block_cycles_mean": 2688587,
+    "block_cycles_p95": 2768252,
+    "block_cycles_max": 2776280,
+    "hard_block_budget": 3600000,
+    "block_deadline_violations": 0,
+    "target_block_budget": 2880000,
+    "hard_budget_utilization": 0.7711888888888889,
+    "realtime_verdict": "PASS_TARGET_20_PERCENT_MARGIN"
+  },
+  "signal_metrics": {
+    "input_snr_db": 0.281909088811306,
+    "output_snr_db": 21.539334969741198,
+    "snr_improvement_db": 21.25742588092989
+  }
+}

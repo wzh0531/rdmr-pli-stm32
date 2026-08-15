@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "status": "public_release_verified",
+  "status": "phase8_public_release",
   "repository_name": "rdmr-pli-stm32",
   "repository_url": "https://github.com/wzh0531/rdmr-pli-stm32",
   "repository_visibility_verified": "public",
   "repository_initial_state_verified": "empty",
   "remote_initial_verified_commit": "1c6c3154d3654aca5789c47598a1aaa4d0603469",
   "remote_pre_policy_refresh_verified_commit": "8bab9f80b40f6bb347ef55b6421d3300f607d376",
-  "version": "1.0.0-candidate",
+  "version": "1.1.0",
   "prepared_at_local": "2026-08-04",
   "policy_refreshed_at_local": "2026-08-11",
   "final_public_release_approved_at_local": "2026-08-11",
@@ -18,9 +18,9 @@
     "affiliation": "School of Electronic and Information Engineering, Hebei University of Technology"
   },
   "package": {
-    "released_file_count_excluding_sha256sums": 181,
-    "released_bytes_excluding_sha256sums": 11659345,
-    "approximate_size_mib_excluding_sha256sums": 11.12,
+    "released_file_count_excluding_sha256sums": 277,
+    "released_bytes_excluding_sha256sums": 17431270,
+    "approximate_size_mib_excluding_sha256sums": 16.62,
     "package_plan": "paper_workspace/delivery/package-plan__github-rdmr-pli-stm32__candidate__v1.0.0.md"
   },
   "included": [
@@ -31,15 +31,19 @@
     "host per-run metrics and grouped summaries",
     "Proteus and physical UART logs and validation summaries",
     "final statistical outputs, figures, tables, and provenance manifests",
-    "MIT-licensed software and CC-BY-4.0-licensed data, figures, and documentation"
+    "MIT-licensed software and CC-BY-4.0-licensed data, figures, and documentation",
+    "48-record/47-subject-cluster MIT-BIH selection manifest and derived controlled-injection results",
+    "4,860-pair exhaustive-to-hierarchical search bridge results",
+    "Rev17 selected AXF/HEX/MAP images, 17 raw UART logs, and validation summaries",
+    "Phase 8 protocol and quantitative audit"
   ],
   "excluded": [
     "regenerable Phase-4 NPZ batches (approximately 287 MiB)",
-    "compiled host and ARMCC binaries and caches",
     "historical pre-fix Proteus packages",
     "raw physical-setup photographs",
     "current CSSP manuscript and internal submission-control records",
-    "frozen four-page EI working draft (private; historical records may retain only its SHA-256 identifier)"
+    "frozen four-page EI working draft (private; historical records may retain only its SHA-256 identifier)",
+    "unselected compiled caches; selected Phase 8 bridge DLLs and Rev17 AXF/HEX/MAP evidence are included"
   ],
   "checks": {
     "python_unit_tests_12_of_12": "PASS",
@@ -62,7 +66,13 @@
     "repository_locator": "PASS_PUBLIC_URL_VERIFIED",
     "private_repository_push": "PASS",
     "public_github_url": "PASS_LOGGED_OUT_ACCESS_VERIFIED_2026_08_12",
-    "final_author_file_list_approval": "PASS_APPROVED_2026_08_11"
+    "final_author_file_list_approval": "PASS_APPROVED_2026_08_11",
+    "phase8_candidate_checksums_126_of_126": "PASS",
+    "phase8_search_bridge_4860_pairs": "PASS",
+    "phase8_mitdb_48_records_47_clusters": "PASS_WITH_CONTROLLED_INJECTION_BOUNDARY",
+    "phase8_rev17_hierarchical_14_of_14_block_targets": "PASS",
+    "phase8_exhaustive_block_target": "FAIL_RETAINED_AS_COMPARATOR",
+    "phase8_clean_clone_test": "PENDING_POST_PUSH_PUBLIC_REVALIDATION"
   },
   "frozen_hash_assertions": {
     "protocol_sha256": "01C2BABA2C3044D20A23C9D9CEC4E25DF54EBC3D08F47FC626407B44B97A6933",
@@ -70,7 +80,9 @@
     "ei_draft_verification": "NOT_CHECKED_FILE_NOT_PUBLIC"
   },
   "release_blockers": [],
-  "submission_blockers": [
-    "confirm a usable official CSSP submission route"
-  ]
+  "submission_blockers": [],
+  "phase8_prepared_at_local": "2026-08-14",
+  "phase8_base_public_commit": "091f71e0a60b92835999f6f19de9950c18c932a2",
+  "phase8_release_tag": "phase8-v1.0.0",
+  "phase8_release_commit": "RESOLVED_BY_TAG"
 }

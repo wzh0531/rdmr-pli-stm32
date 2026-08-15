@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "status": "THREE_CAPTURES_VALIDATED",
+  "scenario_id": 804,
+  "algorithm": "A3",
+  "search_mode": "hierarchical-32",
+  "capture_provenance": {
+    "run1": {"file": "S804_run1.txt", "sha256": "51C93DACDB0157E05B261769F9F3568B57843CD7847662009688D3FE614E6B13"},
+    "run2": {"file": "S804_run2.txt", "source_modified": "2026-08-14T15:30:34.6363770+08:00", "sha256": "51C93DACDB0157E05B261769F9F3568B57843CD7847662009688D3FE614E6B13"},
+    "run3": {"file": "S804_run3.txt", "source_modified": "2026-08-14T15:30:56.5733021+08:00", "sha256": "51C93DACDB0157E05B261769F9F3568B57843CD7847662009688D3FE614E6B13"}
+  },
+  "machine_validation": {
+    "passed_captures": 3,
+    "failed_captures": 0,
+    "rows_per_capture": 160,
+    "block_deadline_violations_per_capture": [0, 0, 0],
+    "block_cycles_mean_per_capture": [595206, 595206, 595206],
+    "block_cycles_p95_per_capture": [2758248, 2758248, 2758248],
+    "block_cycles_max_per_capture": [2775151, 2775151, 2775151],
+    "maximum_cycle_mean": 2775151,
+    "maximum_cycle_range": 0,
+    "maximum_cycle_standard_deviation": 0,
+    "maximum_cycle_cv_percent": 0,
+    "all_meet_target_2880000": true
+  },
+  "provenance_boundary": "The three author-provided capture files have distinct filenames and source modification times but byte-identical UART content because the bare-metal workload and DWT path are deterministic and the firmware run_id is fixed at 1. Independent power-cycle execution is therefore a human-provided acquisition fact, not independently machine-verifiable from the payload alone.",
+  "bounded_conclusion": "Across the three provided S804 captures, every 50 ms block met the 2.88 M-cycle target and the measured timing sequence was exactly reproducible."
+}

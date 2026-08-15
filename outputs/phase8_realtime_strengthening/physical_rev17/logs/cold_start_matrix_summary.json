@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "status": "TWELVE_CAPTURES_VALIDATED",
+  "capture_count": 12,
+  "scenario_count": 4,
+  "captures_per_scenario": 3,
+  "common_condition": "Rev17 implementation 0.4.1; STM32F103 at 72 MHz; F4; PLI 0.20; no added noise; seed 1000; 8000 samples; 50-sample blocks",
+  "scenarios": [
+    {"scenario": 804, "algorithm": "A3", "search": "hierarchical-32", "captures": 3, "max_cycles": 2775151, "max_cycle_range": 0, "block_violations_each": 0, "verdict": "PASS_TARGET_20_PERCENT_MARGIN"},
+    {"scenario": 805, "algorithm": "A3", "search": "exhaustive-201", "captures": 3, "max_cycles": 17034581, "max_cycle_range": 0, "block_violations_each": 34, "verdict": "FAIL_HARD_BLOCK_BUDGET"},
+    {"scenario": 806, "algorithm": "B4", "search": "hierarchical-32", "captures": 3, "max_cycles": 2782185, "max_cycle_range": 0, "block_violations_each": 0, "verdict": "PASS_TARGET_20_PERCENT_MARGIN"},
+    {"scenario": 807, "algorithm": "A2", "search": "hierarchical-32", "captures": 3, "max_cycles": 2776280, "max_cycle_range": 0, "block_violations_each": 0, "verdict": "PASS_TARGET_20_PERCENT_MARGIN"}
+  ],
+  "deterministic_repeat_finding": "Within each firmware image, all three author-provided UART captures are byte-identical. Additional repetitions of the same image are therefore not expected to add timing information under this no-interrupt deterministic benchmark.",
+  "next_boundary_selection_rule": "Use the frozen full host matrix to select conditions that change scheduler activity or expose an A3-versus-B4 quality boundary; do not add repetitions solely to inflate n."
+}

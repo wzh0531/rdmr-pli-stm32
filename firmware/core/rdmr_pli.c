@@ -59,64 +59,142 @@ static float ring_mean(const rdmr_pli_t *instance)
     return sum / (float)instance->ring_count;
 }
 
-static float estimate_frequency(const rdmr_pli_t *instance)
+static float grid_power(
+    const rdmr_pli_t *instance,
+    float mean,
+    uint16_t grid_index
+)
+{
+    float q1 = 0.0f;
+    float q2 = 0.0f;
+    const float coefficient = rdmr_tracker_coefficients[grid_index];
+    uint16_t sample_index;
+
+    for (sample_index = 0U; sample_index < instance->ring_count; ++sample_index) {
+        uint16_t ring_index;
+        float sample;
+        float q0;
+
+        if (instance->ring_count < RDMR_TRACKER_WINDOW) {
+            ring_index = sample_index;
+        } else {
+            ring_index =
+                (uint16_t)(
+                    (instance->ring_write + sample_index)
+                    % RDMR_TRACKER_WINDOW
+                );
+        }
+        sample =
+            (instance->input_ring[ring_index] - mean)
+            * rdmr_tracker_window[
+                (uint16_t)(
+                    sample_index
+                    + RDMR_TRACKER_WINDOW
+                    - instance->ring_count
+                )
+            ];
+        q0 = coefficient * q1 - q2 + sample;
+        q2 = q1;
+        q1 = q0;
+    }
+    return q1 * q1 + q2 * q2 - coefficient * q1 * q2;
+}
+
+static void consider_grid_point(
+    const rdmr_pli_t *instance,
+    float mean,
+    uint16_t grid_index,
+    float *best_power,
+    uint16_t *best_index
+)
+{
+    const float power = grid_power(instance, mean, grid_index);
+
+    if (power > *best_power) {
+        *best_power = power;
+        *best_index = grid_index;
+    }
+}
+
+static float estimate_frequency(rdmr_pli_t *instance)
 {
     float best_power = -1.0f;
-    float best_frequency = RDMR_INITIAL_HZ;
     float mean;
+    uint16_t best_index = 100U;
     uint16_t grid_index;
-    uint16_t sample_index;
+    uint16_t evaluations = 0U;
 
     if (instance->ring_count < RDMR_TRACKER_MIN_SAMPLES) {
         return RDMR_INITIAL_HZ;
     }
 
     mean = ring_mean(instance);
-    for (grid_index = 0U; grid_index < RDMR_GRID_SIZE; ++grid_index) {
-        float q1 = 0.0f;
-        float q2 = 0.0f;
-        const float coefficient = rdmr_tracker_coefficients[grid_index];
+#if RDMR_TRACKER_SEARCH_MODE == RDMR_TRACKER_SEARCH_HIERARCHICAL
+    for (
+        grid_index = 0U;
+        grid_index < RDMR_GRID_SIZE;
+        grid_index = (uint16_t)(grid_index + RDMR_TRACKER_COARSE_STRIDE)
+    ) {
+        consider_grid_point(
+            instance,
+            mean,
+            grid_index,
+            &best_power,
+            &best_index
+        );
+        evaluations += 1U;
+    }
 
-        for (sample_index = 0U; sample_index < instance->ring_count; ++sample_index) {
-            uint16_t ring_index;
-            float sample;
-            float q0;
+    {
+        uint16_t fine_start;
+        uint16_t fine_end;
 
-            if (instance->ring_count < RDMR_TRACKER_WINDOW) {
-                ring_index = sample_index;
-            } else {
-                ring_index =
-                    (uint16_t)(
-                        (instance->ring_write + sample_index)
-                        % RDMR_TRACKER_WINDOW
-                    );
-            }
-            sample =
-                (instance->input_ring[ring_index] - mean)
-                * rdmr_tracker_window[
-                    (uint16_t)(
-                        sample_index
-                        + RDMR_TRACKER_WINDOW
-                        - instance->ring_count
-                    )
-                ];
-            q0 = coefficient * q1 - q2 + sample;
-            q2 = q1;
-            q1 = q0;
+        if (best_index < RDMR_TRACKER_FINE_RADIUS) {
+            fine_start = 0U;
+        } else if (
+            best_index
+            > (uint16_t)(
+                RDMR_GRID_SIZE
+                - 1U
+                - RDMR_TRACKER_FINE_RADIUS
+            )
+        ) {
+            fine_start =
+                (uint16_t)(RDMR_GRID_SIZE - RDMR_TRACKER_FINE_POINTS);
+        } else {
+            fine_start =
+                (uint16_t)(best_index - RDMR_TRACKER_FINE_RADIUS);
         }
-
-        {
-            const float power =
-                q1 * q1 + q2 * q2 - coefficient * q1 * q2;
-            if (power > best_power) {
-                best_power = power;
-                best_frequency =
-                    RDMR_SEARCH_LOW_HZ
-                    + RDMR_SEARCH_STEP_HZ * (float)grid_index;
-            }
+        fine_end =
+            (uint16_t)(fine_start + RDMR_TRACKER_FINE_POINTS);
+        for (grid_index = fine_start; grid_index < fine_end; ++grid_index) {
+            consider_grid_point(
+                instance,
+                mean,
+                grid_index,
+                &best_power,
+                &best_index
+            );
+            evaluations += 1U;
         }
     }
-    return best_frequency;
+#else
+    for (grid_index = 0U; grid_index < RDMR_GRID_SIZE; ++grid_index) {
+        consider_grid_point(
+            instance,
+            mean,
+            grid_index,
+            &best_power,
+            &best_index
+        );
+        evaluations += 1U;
+    }
+#endif
+
+    instance->tracker_grid_evaluations += evaluations;
+    return
+        RDMR_SEARCH_LOW_HZ
+        + RDMR_SEARCH_STEP_HZ * (float)best_index;
 }
 
 static uint16_t state_interval(rdmr_state_t state)
@@ -172,6 +250,9 @@ static void update_scheduler(rdmr_pli_t *instance)
 
 static void run_tracker(rdmr_pli_t *instance)
 {
+    if (instance->ring_count >= RDMR_TRACKER_MIN_SAMPLES) {
+        instance->tracker_searches += 1U;
+    }
     const float candidate = estimate_frequency(instance);
     instance->frequency_hz =
         RDMR_FREQ_OLD_WEIGHT * instance->frequency_hz
@@ -217,6 +298,36 @@ static void finish_block(rdmr_pli_t *instance)
     if (instance->mode == RDMR_MODE_FULL_RATE) {
         instance->state = RDMR_STATE_FAST;
         run_tracker(instance);
+        return;
+    }
+
+    if (
+        (instance->mode == RDMR_MODE_FIXED_INTERVAL_3)
+        || (instance->mode == RDMR_MODE_FIXED_INTERVAL_12)
+        || (instance->mode == RDMR_MODE_FIXED_INTERVAL_4)
+    ) {
+        uint16_t interval = 4U;
+        if (instance->mode == RDMR_MODE_FIXED_INTERVAL_3) {
+            interval = 3U;
+        } else if (instance->mode == RDMR_MODE_FIXED_INTERVAL_12) {
+            interval = 12U;
+        }
+        instance->state = RDMR_STATE_FIXED;
+        if (instance->blocks_since_tracker >= interval) {
+            run_tracker(instance);
+        }
+        return;
+    }
+
+    if (instance->mode == RDMR_MODE_TWO_STATE_RESIDUAL) {
+        if (instance->residual_ratio > (0.055f * RDMR_THRESHOLD_SCALE)) {
+            instance->state = RDMR_STATE_FAST;
+        } else if (instance->residual_ratio < (0.025f * RDMR_THRESHOLD_SCALE)) {
+            instance->state = RDMR_STATE_SLOW;
+        }
+        if (instance->blocks_since_tracker >= state_interval(instance->state)) {
+            run_tracker(instance);
+        }
         return;
     }
 
@@ -301,6 +412,9 @@ void rdmr_get_telemetry(
     telemetry->frequency_next_hz = instance->frequency_hz;
     telemetry->residual_ratio = instance->residual_ratio;
     telemetry->tracker_calls = instance->tracker_calls;
+    telemetry->tracker_searches = instance->tracker_searches;
+    telemetry->tracker_grid_evaluations =
+        instance->tracker_grid_evaluations;
     telemetry->state_used = instance->last_state_used;
     telemetry->state_next = instance->state;
 }

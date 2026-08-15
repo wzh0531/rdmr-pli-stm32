@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "log_path": "outputs/phase8_realtime_strengthening/physical_rev17/logs/S805_run1.txt",
+  "metadata": {
+    "implementation": "0.4.1",
+    "firmware_revision": 17,
+    "scenario_id": 805,
+    "algorithm": 3,
+    "search_mode": 0,
+    "points_per_search": 201,
+    "seed": 1000
+  },
+  "rows": 160,
+  "tracker": {
+    "calls": 35,
+    "searches": 34,
+    "grid_evaluations": 6834
+  },
+  "timing": {
+    "sample_deadline": 72000,
+    "sample_deadline_violations": 34,
+    "sample_cycles_max": 16979341,
+    "block_cycles_mean": 3416318,
+    "block_cycles_p95": 16922784,
+    "block_cycles_max": 17034581,
+    "hard_block_budget": 3600000,
+    "block_deadline_violations": 34,
+    "target_block_budget": 2880000,
+    "hard_budget_utilization": 4.731828055555556,
+    "realtime_verdict": "FAIL_HARD_BLOCK_BUDGET"
+  },
+  "signal_metrics": {
+    "input_snr_db": 0.281909088811306,
+    "output_snr_db": 20.073059758354475,
+    "snr_improvement_db": 19.791150669543168
+  }
+}

@@ -53,7 +53,19 @@ static rdmr_mode_t algorithm_mode(rdmr_algorithm_id_t algorithm_id)
     if (algorithm_id == RDMR_ALGORITHM_A2_FULL_RATE) {
         return RDMR_MODE_FULL_RATE;
     }
-    return RDMR_MODE_RESIDUAL_MULTIRATE;
+    if (algorithm_id == RDMR_ALGORITHM_A3_RESIDUAL_MULTIRATE) {
+        return RDMR_MODE_RESIDUAL_MULTIRATE;
+    }
+    if (algorithm_id == RDMR_ALGORITHM_B1_FIXED_INTERVAL_3) {
+        return RDMR_MODE_FIXED_INTERVAL_3;
+    }
+    if (algorithm_id == RDMR_ALGORITHM_B2_FIXED_INTERVAL_12) {
+        return RDMR_MODE_FIXED_INTERVAL_12;
+    }
+    if (algorithm_id == RDMR_ALGORITHM_B3_FIXED_INTERVAL_4) {
+        return RDMR_MODE_FIXED_INTERVAL_4;
+    }
+    return RDMR_MODE_TWO_STATE_RESIDUAL;
 }
 
 int rdmr_algorithm_init(
@@ -64,7 +76,7 @@ int rdmr_algorithm_init(
     if (instance == NULL) {
         return 0;
     }
-    if (algorithm_id > RDMR_ALGORITHM_A3_RESIDUAL_MULTIRATE) {
+    if (algorithm_id > RDMR_ALGORITHM_B4_TWO_STATE_RESIDUAL) {
         return 0;
     }
 
@@ -107,6 +119,8 @@ void rdmr_algorithm_get_telemetry(
         telemetry->frequency_next_hz = RDMR_NOTCH_FREQUENCY_HZ;
         telemetry->residual_ratio = 0.0f;
         telemetry->tracker_calls = 0U;
+        telemetry->tracker_searches = 0U;
+        telemetry->tracker_grid_evaluations = 0U;
         telemetry->state_used = RDMR_STATE_FIXED;
         telemetry->state_next = RDMR_STATE_FIXED;
         return;
@@ -117,6 +131,9 @@ void rdmr_algorithm_get_telemetry(
     telemetry->frequency_next_hz = nlms_telemetry.frequency_next_hz;
     telemetry->residual_ratio = nlms_telemetry.residual_ratio;
     telemetry->tracker_calls = nlms_telemetry.tracker_calls;
+    telemetry->tracker_searches = nlms_telemetry.tracker_searches;
+    telemetry->tracker_grid_evaluations =
+        nlms_telemetry.tracker_grid_evaluations;
     telemetry->state_used = nlms_telemetry.state_used;
     telemetry->state_next = nlms_telemetry.state_next;
 }

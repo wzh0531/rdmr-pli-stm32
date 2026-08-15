@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('A0', 'A1', 'A2', 'A3')]
+    [ValidateSet('A0', 'A1', 'A2', 'A3', 'B1', 'B2', 'B3', 'B4')]
     [string]$Algorithm = 'A3',
     [ValidateSet('F0', 'F1', 'F2', 'F3', 'F4', 'F5')]
     [string]$Trajectory = 'F1',
@@ -18,6 +18,8 @@ param(
     [int]$EmitDiagnostics = 0,
     [ValidateSet(0, 1)]
     [int]$ProteusBuild = 1,
+    [ValidateSet(0, 1)]
+    [int]$TrackerSearchMode = 1,
     [ValidateRange(1, 999)]
     [uint32]$FirmwareRevision = 14,
     [string]$OutputStem = '',
@@ -38,15 +40,15 @@ if ([string]::IsNullOrWhiteSpace($ArmccBinRoot)) {
 $CubePackageRoot = (Resolve-Path -LiteralPath $CubePackageRoot).Path
 $ArmccBinRoot = (Resolve-Path -LiteralPath $ArmccBinRoot).Path
 $buildRoot = Join-Path $projectRoot 'build'
-$objectRoot = Join-Path $buildRoot ("obj_{0}_{1}_{2}_s{3}_dwt{4}_diag{5}_prot{6}_rev{7}" -f $Algorithm, $Trajectory, $Noise, $Seed, $EnableDwt, $EmitDiagnostics, $ProteusBuild, $FirmwareRevision)
+$objectRoot = Join-Path $buildRoot ("obj_{0}_{1}_{2}_s{3}_dwt{4}_diag{5}_prot{6}_search{7}_rev{8}" -f $Algorithm, $Trajectory, $Noise, $Seed, $EnableDwt, $EmitDiagnostics, $ProteusBuild, $TrackerSearchMode, $FirmwareRevision)
 
-$algorithmIds = @{ A0 = 0; A1 = 1; A2 = 2; A3 = 3 }
+$algorithmIds = @{ A0 = 0; A1 = 1; A2 = 2; A3 = 3; B1 = 4; B2 = 5; B3 = 6; B4 = 7 }
 $trajectoryIds = @{ F0 = 0; F1 = 1; F2 = 2; F3 = 3; F4 = 4; F5 = 5 }
 $noiseIds = @{ none = 0; snr20 = 1; snr10 = 2 }
 $nearLineIds = @{ N0 = 0; N1 = 1; N2 = 2; N3 = 3 }
 
 if ([string]::IsNullOrWhiteSpace($OutputStem)) {
-    $OutputStem = "rdmr_stm32_{0}_{1}_{2}_s{3}" -f $Algorithm, $Trajectory, $Noise, $Seed
+    $OutputStem = "rdmr_stm32_{0}_{1}_{2}_s{3}_search{4}_rev{5}" -f $Algorithm, $Trajectory, $Noise, $Seed, $TrackerSearchMode, $FirmwareRevision
 }
 if ($OutputStem -notmatch '^[A-Za-z0-9_-]+$') {
     throw 'OutputStem may contain only letters, digits, underscore, and hyphen'
@@ -77,6 +79,7 @@ $common = @(
     ("-DRDMR_ENABLE_DWT={0}" -f $EnableDwt),
     ("-DRDMR_EMIT_INIT_DIAGNOSTICS={0}" -f $EmitDiagnostics),
     ("-DRDMR_PROTEUS_BUILD={0}" -f $ProteusBuild),
+    ("-DRDMR_TRACKER_SEARCH_MODE={0}" -f $TrackerSearchMode),
     ("-DRDMR_FIRMWARE_REVISION={0}" -f $FirmwareRevision),
     '-I', $deviceInclude,
     '-I', $cmsisInclude,
@@ -147,6 +150,7 @@ Write-Output "SCENARIO_ID: $ScenarioId"
 Write-Output "DWT: $EnableDwt"
 Write-Output "DIAGNOSTICS: $EmitDiagnostics"
 Write-Output "PROTEUS_BUILD: $ProteusBuild"
+Write-Output "TRACKER_SEARCH_MODE: $TrackerSearchMode"
 Write-Output "FIRMWARE_REVISION: $FirmwareRevision"
 Write-Output "ELF: $elf"
 Write-Output "HEX: $hex"

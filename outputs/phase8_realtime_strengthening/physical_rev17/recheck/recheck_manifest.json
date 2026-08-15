@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "status": "BUILT_NOT_RUN",
+  "purpose": "Repeat the A3 hierarchical-search pilot after binding deadline metadata to the 72 MHz protocol clock.",
+  "source_log_sha256": "512D36C04B9EDFFA78574FD4E6829063DE7565EB9F7A1066343C6C83E34537BA",
+  "change_scope": "deadline metadata and violation counters only; algorithm and DWT timing path unchanged",
+  "configuration": {
+    "protocol": "cssp-rdmr-pli-v0.5.0",
+    "implementation": "0.4.1",
+    "firmware_revision": 17,
+    "scenario_id": 804,
+    "algorithm": 3,
+    "trajectory": 4,
+    "noise": 0,
+    "seed": 1000,
+    "tracker_search_mode": 1,
+    "tracker_grid_points_max": 32,
+    "sample_deadline_cycles": 72000,
+    "block_deadline_cycles": 3600000
+  },
+  "files": {
+    "PHASE8_REV17_S804_A3_F4_P020_Z0_SEARCH1.hex": "AE88C01E96D7E780D7B39A7458119241ADA88C8F7DBD511F81F0E8E39F032D48",
+    "PHASE8_REV17_S804_A3_F4_P020_Z0_SEARCH1.axf": "506B9C6D82793F170499AA627561F664B34039FCE4F07D4E1654D02D7EA5E69E",
+    "PHASE8_REV17_S804_A3_F4_P020_Z0_SEARCH1.map": "BC22959851CDD2E4203C47966C452697EF9C0293F1C453BD811C4930BFDA1A2D"
+  },
+  "resource_summary": {
+    "total_ro_bytes": 21252,
+    "total_rw_bytes": 5912,
+    "total_rom_bytes": 21252
+  },
+  "expected_log_name": "S804_run1.txt"
+}

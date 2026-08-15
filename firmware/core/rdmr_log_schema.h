@@ -4,7 +4,8 @@
 #define RDMR_LOG_HEADER \
     "run_id,scenario_id,algorithm,seed,n,input,clean,output," \
     "true_frequency,estimated_frequency,estimated_frequency_next," \
-    "tracker_calls,state,cycles,block_cycles_mean,block_cycles_p95," \
+    "tracker_calls,tracker_searches,tracker_grid_evaluations,state," \
+    "cycles,block_cycles_total,block_cycles_mean,block_cycles_p95," \
     "residual_ratio,desired_energy,input_error_energy," \
     "output_error_energy,numeric_flags\r\n"
 

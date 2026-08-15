@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "status": "BUILT_NOT_RUN",
+  "selection_basis": "frozen full host matrix plus the observed byte-identical 12-capture cold-start matrix",
+  "repeat_policy": "one capture per new boundary image; repeated identical-image captures were stopped because all four pilot images produced byte-identical triplicates",
+  "run_order": [808, 809, 810, 811, 812],
+  "scenarios": [
+    {"scenario": 808, "algorithm": "A3", "trajectory": "F4", "pli_amplitude": 1.0, "seed": 1020, "purpose": "high scheduler-activity boundary", "hex": "PHASE8_REV17_S808_A3_F4_P100_Z0_SEARCH1.hex", "sha256": "0B3F77BE77E0D0D53461CAD82B8ACB1336A41AE3CD2660E1E7B64B098963C40F", "log": "S808_run1.txt"},
+    {"scenario": 809, "algorithm": "B4", "trajectory": "F4", "pli_amplitude": 1.0, "seed": 1020, "purpose": "paired B4 high-activity comparator", "hex": "PHASE8_REV17_S809_B4_F4_P100_Z0_SEARCH1.hex", "sha256": "2E3E0281ADC84CBD9E6F09E0B97235D054965356F6DC5BBEB99949931D32D8F8", "log": "S809_run1.txt"},
+    {"scenario": 810, "algorithm": "A2", "trajectory": "F4", "pli_amplitude": 1.0, "seed": 1020, "purpose": "full-rate high-activity reference", "hex": "PHASE8_REV17_S810_A2_F4_P100_Z0_SEARCH1.hex", "sha256": "699E8E98C83F41974D4175288B7961604EDB8BC582DE5F7B818A57E561030AFE", "log": "S810_run1.txt"},
+    {"scenario": 811, "algorithm": "A3", "trajectory": "F0", "pli_amplitude": 0.2, "seed": 1007, "purpose": "A3-versus-B4 quality counterexample boundary", "hex": "PHASE8_REV17_S811_A3_F0_P020_Z0_SEARCH1.hex", "sha256": "B6778B430EE1686C5341237647BA7CB51F9EBFFBA013742CDE575135F1C1ED0C", "log": "S811_run1.txt"},
+    {"scenario": 812, "algorithm": "B4", "trajectory": "F0", "pli_amplitude": 0.2, "seed": 1007, "purpose": "paired B4 counterexample comparator", "hex": "PHASE8_REV17_S812_B4_F0_P020_Z0_SEARCH1.hex", "sha256": "0BD9074F8DAF25139E8769515AAC623A1DA1CE52DA513F29E23B23FA9DCAE759", "log": "S812_run1.txt"}
+  ],
+  "claim_boundary": "Boundary selection is adaptive and explicitly based on the frozen host matrix. These five runs test worst scheduler activity and an unfavorable A3/B4 quality case; they are not a random sample or an estimate of population frequency."
+}

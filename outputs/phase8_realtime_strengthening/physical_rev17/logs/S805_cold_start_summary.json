@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "status": "THREE_CAPTURES_VALIDATED_REALTIME_FAILURE_REPRODUCED",
+  "scenario_id": 805,
+  "algorithm": "A3",
+  "search_mode": "exhaustive-201",
+  "capture_provenance": {
+    "run1": {"file": "S805_run1.txt", "sha256": "64BB22A2AF844265C7CF3F37AFB63B801A67AB046B1A7387A333DF827E81100D"},
+    "run2": {"file": "S805_run2.txt", "source_modified": "2026-08-14T15:32:38.6938411+08:00", "sha256": "64BB22A2AF844265C7CF3F37AFB63B801A67AB046B1A7387A333DF827E81100D"},
+    "run3": {"file": "S805_run3.txt", "source_modified": "2026-08-14T15:33:05.5988729+08:00", "sha256": "64BB22A2AF844265C7CF3F37AFB63B801A67AB046B1A7387A333DF827E81100D"}
+  },
+  "machine_validation": {
+    "structurally_valid_captures": 3,
+    "rows_per_capture": 160,
+    "grid_evaluations_per_capture": [6834, 6834, 6834],
+    "block_deadline_violations_per_capture": [34, 34, 34],
+    "block_cycles_mean_per_capture": [3416318, 3416318, 3416318],
+    "block_cycles_p95_per_capture": [16922784, 16922784, 16922784],
+    "block_cycles_max_per_capture": [17034581, 17034581, 17034581],
+    "maximum_cycle_mean": 17034581,
+    "maximum_cycle_range": 0,
+    "maximum_cycle_standard_deviation": 0,
+    "maximum_cycle_cv_percent": 0,
+    "all_fail_hard_budget_3600000": true
+  },
+  "provenance_boundary": "The three author-provided files have distinct capture filenames/timestamps but byte-identical deterministic UART payloads and a firmware run_id fixed at 1; independent power cycles are human-provided acquisition provenance.",
+  "bounded_conclusion": "The exhaustive 201-point A3 baseline was structurally valid but reproduced 34 hard block-budget violations and a 17.035 M-cycle maximum in all three provided captures."
+}

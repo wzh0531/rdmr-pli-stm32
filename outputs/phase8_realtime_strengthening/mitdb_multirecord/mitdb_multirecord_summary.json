@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "protocol": "rdmr-pli-realtime-strengthening-v0.5.0",
+  "selection_manifest_sha256": "D50AFECC6438B0A5EB10ADB65038A5509AB6B304574CCE07303767789E2A426D",
+  "record_count": 48,
+  "subject_cluster_count": 47,
+  "segments_per_record": 3,
+  "injection_conditions_per_segment": 24,
+  "paired_inputs": 3456,
+  "algorithm_runs": 10368,
+  "algorithm_summary": [
+    {
+      "algorithm": 2,
+      "name": "A2",
+      "runs": 3456,
+      "mean_output_snr_db": 16.355292489501412,
+      "mean_frequency_mae_hz": 0.11760477144319967,
+      "mean_tracker_calls": 160.0,
+      "mean_grid_evaluations": 5088.0
+    },
+    {
+      "algorithm": 3,
+      "name": "A3",
+      "runs": 3456,
+      "mean_output_snr_db": 16.33469905442042,
+      "mean_frequency_mae_hz": 0.12260782922208976,
+      "mean_tracker_calls": 93.61255787037037,
+      "mean_grid_evaluations": 2963.6018518518517
+    },
+    {
+      "algorithm": 7,
+      "name": "B4",
+      "runs": 3456,
+      "mean_output_snr_db": 16.3178339539608,
+      "mean_frequency_mae_hz": 0.12597854084022714,
+      "mean_tracker_calls": 94.3995949074074,
+      "mean_grid_evaluations": 2988.787037037037
+    }
+  ],
+  "subject_cluster_comparisons": {
+    "A3_minus_A2": {
+      "subject_clusters": 47,
+      "mean_output_snr_difference_db": -0.020672078213637195,
+      "subject_cluster_bootstrap_ci95_db": [
+        -0.024615254239194164,
+        -0.016854322090221013
+      ],
+      "minimum_subject_mean_output_snr_difference_db": -0.05150931636938153,
+      "mean_frequency_mae_difference_hz": 0.0050150466805582595,
+      "mean_tracker_call_difference": -66.57254728132386,
+      "mean_grid_evaluation_difference": -2130.3215130023636
+    },
+    "A3_minus_B4": {
+      "subject_clusters": 47,
+      "mean_output_snr_difference_db": 0.017011483571077828,
+      "subject_cluster_bootstrap_ci95_db": [
+        0.011528652977638186,
+        0.02274542714606381
+      ],
+      "minimum_subject_mean_output_snr_difference_db": -0.051921692883505566,
+      "mean_frequency_mae_difference_hz": -0.0034037230718666927,
+      "mean_tracker_call_difference": -0.7120271867612293,
+      "mean_grid_evaluation_difference": -22.78486997635934
+    }
+  },
+  "interpretation_boundary": "controlled PLI injection on public ECG morphology; not clinical, acquisition-chain, or independent-condition validation"
+}

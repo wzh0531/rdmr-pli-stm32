@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "protocol": "rdmr-pli-realtime-strengthening-v0.5.0",
+  "status": "PASS",
+  "files": {
+    "outputs\\phase8_realtime_strengthening\\mitdb_multirecord\\selection_manifest.json": "D50AFECC6438B0A5EB10ADB65038A5509AB6B304574CCE07303767789E2A426D",
+    "outputs\\phase8_realtime_strengthening\\host_bridge_full\\tracker_hierarchical.dll": "8CBEEC9C926A2DF1E469A7E2A436531B85FA6303916B5F12DF6533629E90CCBA",
+    "outputs\\phase8_realtime_strengthening\\mitdb_multirecord\\mitdb_multirecord_metrics.csv": "CFE2E9CEB9B277BE093BCA097E2863162CBE0EA2E795FBC0AE971A177DAF2434",
+    "outputs\\phase8_realtime_strengthening\\mitdb_multirecord\\mitdb_multirecord_paired_differences.csv": "F6EA672BB1B9268F4F81B3B1AF07504BF71388831D98A84FD8A0199C389421CE",
+    "outputs\\phase8_realtime_strengthening\\mitdb_multirecord\\mitdb_multirecord_subject_cluster_summary.csv": "AC547C0A49E22011775369EE23A017D946D354DBD242F09FD94AE33C0FA9DCF8",
+    "outputs\\phase8_realtime_strengthening\\mitdb_multirecord\\mitdb_multirecord_summary.json": "2B2E9C8DCB3C036108596A050F86B969C57E67640A904624FFB48D7604976537"
+  }
+}

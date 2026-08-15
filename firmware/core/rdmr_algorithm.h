@@ -31,6 +31,8 @@ typedef struct {
     float frequency_next_hz;
     float residual_ratio;
     uint32_t tracker_calls;
+    uint32_t tracker_searches;
+    uint32_t tracker_grid_evaluations;
     rdmr_state_t state_used;
     rdmr_state_t state_next;
 } rdmr_algorithm_telemetry_t;

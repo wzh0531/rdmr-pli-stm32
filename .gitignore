@@ -15,3 +15,8 @@ outputs/phase4_host/batches/
 *.map
 *.uvguix.*
 
+# Phase 8 immutable bridge and Rev17 evidence selected for the public release.
+!outputs/phase8_realtime_strengthening/host_bridge_full/*.dll
+!outputs/phase8_realtime_strengthening/physical_rev17/**/*.axf
+!outputs/phase8_realtime_strengthening/physical_rev17/**/*.hex
+!outputs/phase8_realtime_strengthening/physical_rev17/**/*.map

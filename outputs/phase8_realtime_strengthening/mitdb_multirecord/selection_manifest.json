@@ -1,0 +1,1705 @@
+{
+  "schema_version": "1.0.0",
+  "protocol": "rdmr-pli-realtime-strengthening-v0.5.0",
+  "status": "FROZEN_BEFORE_ANALYSIS",
+  "dataset": "MIT-BIH Arrhythmia Database v1.0.0",
+  "dataset_doi": "10.13026/C2F305",
+  "source_url": "https://physionet.org/content/mitdb/1.0.0/",
+  "zip_sha256": "47B26926927C11BD9174154D367C811AFC1B186F650F8A205931CA8C520F0A87",
+  "record_count": 48,
+  "subject_cluster_count": 47,
+  "segment_start_seconds": [
+    300,
+    900,
+    1500
+  ],
+  "lead_rule": "prefer exact MLII; otherwise use first header channel and record the lead",
+  "injection_conditions_per_segment": 24,
+  "algorithms": [
+    "A2_hierarchical",
+    "A3_hierarchical",
+    "B4_hierarchical"
+  ],
+  "records": [
+    {
+      "record": "100",
+      "subject_cluster": "subject_100",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V5"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "60EBC904C7BF3E04D142638D3FD5C903E8DC9F10F1EA3264E07926AA089EE75E",
+      "signal_sha256": "B2EA3C250E56E48F4B7B90697832B8ECD1AFA1E0BB31F2DCFEA4ED6E1075A639"
+    },
+    {
+      "record": "101",
+      "subject_cluster": "subject_101",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "D5F02FBE8673FA05465442191B98CA0D28A1670E7EF0E83FB9EF8723113A311C",
+      "signal_sha256": "698D1EA6F472D23CA50317C72C96CDA2698BADD8578220ED0380CDF241E39006"
+    },
+    {
+      "record": "102",
+      "subject_cluster": "subject_102",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "V5",
+        "V2"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "V5",
+      "selection_reason": "MLII unavailable; first header channel",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "A22F09934EE1CFE339D1502F68EB3F0175815F47273B81EA55F75AEB5584CB0D",
+      "signal_sha256": "2B56039F9ECE83B53511E0FC24E95F23B90712C8017FE4D915E040E78713C38E"
+    },
+    {
+      "record": "103",
+      "subject_cluster": "subject_103",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V2"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "3DA9706FC27CC5D627A31B04B74B908AC0B6E061843A87CBD57801E5EA0FED7B",
+      "signal_sha256": "F7994F0BD196730779998B4BDDF26CB47F396599FB370A08B5CB29A3AC4D555D"
+    },
+    {
+      "record": "104",
+      "subject_cluster": "subject_104",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "V5",
+        "V2"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "V5",
+      "selection_reason": "MLII unavailable; first header channel",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "46B5D09E2CAE7CAAF48F61FC7D0F20962035CF057CF675097FC7D64C4796748F",
+      "signal_sha256": "AEB19BD805996167C6EDD8F1B1A659486C0CBAD101F06F1426548784D9634354"
+    },
+    {
+      "record": "105",
+      "subject_cluster": "subject_105",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "9A024EEBF8E9BAF630308815E689D7E3EAB471AB0069DB6ADED127C396418D48",
+      "signal_sha256": "FCD0153DFEA69C749194BB73DE7DB124588857CFA2F6AECB72754894C8AFDE02"
+    },
+    {
+      "record": "106",
+      "subject_cluster": "subject_106",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "AD5ED3EE5603926A07A09F0D0C9E2A7FF10A705DBAFCDE3D185317730A8839AB",
+      "signal_sha256": "C017BC18B95B1F970BCA143A044EE5D54168648B541E47AA656F2737A59C1202"
+    },
+    {
+      "record": "107",
+      "subject_cluster": "subject_107",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "7C9C70B4CCFD3E503B6D4D20EEB508AA89CFD3A5D2B530BC873ABA6A2A503DD4",
+      "signal_sha256": "EA2254006BB0503926BFB7F6CA3CCF0B3E1AE6BFA8F5EB702BAB5D8E960AF728"
+    },
+    {
+      "record": "108",
+      "subject_cluster": "subject_108",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "1C461D963DB1883589A975DAA80B4104EEE6CABB2F5CFEC3E0D63B78E7A6A405",
+      "signal_sha256": "229A4EF62679DC5C6EA781BFBAEC2BD784151FC9F9517F4CDECD533A9431EB20"
+    },
+    {
+      "record": "109",
+      "subject_cluster": "subject_109",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "3B21402A9A096ACB6A2199B25681E40B0DD201494CB023DED514CD9726BB7FAD",
+      "signal_sha256": "267AFD6CED7A1FD5A8BCD21FCC2B83287E37E3EF57F32E8A0FE39A6E021951CD"
+    },
+    {
+      "record": "111",
+      "subject_cluster": "subject_111",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "9E635A715D6CC44A716A7A73C6DD365BD94099F94E63ACCB2A65C5B25B4B69B5",
+      "signal_sha256": "8372D98AE59FBFD023502A9D0FC03FB5383083DA92584B964484E18593E08485"
+    },
+    {
+      "record": "112",
+      "subject_cluster": "subject_112",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "A78DC4B0907B3DB806395CFF76B3A2E9A70E889B9DC3702C7DE55AA8B41ABD7D",
+      "signal_sha256": "3C7AF9758687314255B5D946A58D9509D53ECF2A300230684FA8ECF00B774BDB"
+    },
+    {
+      "record": "113",
+      "subject_cluster": "subject_113",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "848ED5243ADAF3B53C72B36B1A5A8B5B8CF585A1D78A02E7B25C1D38818D4343",
+      "signal_sha256": "F5509B71DABAAA11C53F687EE17AAB0071BCE3D471E2AB77C71A6434F5B7AACF"
+    },
+    {
+      "record": "114",
+      "subject_cluster": "subject_114",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "V5",
+        "MLII"
+      ],
+      "selected_channel_zero_based": 1,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "830BA89CEBF60945DB0C78332E3CC6C64ACBE218F6F16594660D4F17423EE889",
+      "signal_sha256": "2AE83463EDCFEC256B79CE93716DCB40F289BACBE9E5E7A66CD00D0A31099D4B"
+    },
+    {
+      "record": "115",
+      "subject_cluster": "subject_115",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "3212847A692BF3BC5E1DDE0343D272E7D56735983276031420060D51D0CDD41C",
+      "signal_sha256": "34185EFE9889608C76EBFBF5A467D3457970C6D11B77A2BF81B94BCF46E07C41"
+    },
+    {
+      "record": "116",
+      "subject_cluster": "subject_116",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "5553273CAFA68C106468DDFAA3BD1D6A30DAEC53CFF1642D3592A20110B2EDAD",
+      "signal_sha256": "0AB38CFCA76D816673213DCD570504BB3AB02EF76D51540FD7A6075BC580AD85"
+    },
+    {
+      "record": "117",
+      "subject_cluster": "subject_117",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V2"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "452E70B5EB3FE3EBC3FC61284F70B788DBF83BB98F951C2B0BB5F0B95156D06A",
+      "signal_sha256": "2CE7DE6F20BAF4CFEF0369F9A13FA53784D18E2DA78C11AFA1E4C55E8AD1900E"
+    },
+    {
+      "record": "118",
+      "subject_cluster": "subject_118",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "48A3D0C4E7742CA0E39A2CBB3EA5142A4D41261ADBD0BB25651E0FCD9C6AEF2B",
+      "signal_sha256": "66EA4B70B7D64ABD0F49089AE1B8F0F577664C46E5B29AC23B291934E063DF15"
+    },
+    {
+      "record": "119",
+      "subject_cluster": "subject_119",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "658F01382D7280A06E2F4C06363569D477394A6898C69EE788BB383F6092DF63",
+      "signal_sha256": "02A286A28E69B441568ADD915F16A2856B22BAB893BF8729EE9654411ED3A5AA"
+    },
+    {
+      "record": "121",
+      "subject_cluster": "subject_121",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "1838D38FF54FED9B831207761D7321682DAD0B693F944E4C3A4E6388C46CA6FF",
+      "signal_sha256": "679F374A7B2557FED04A4BC5648301CE9BDD38E5A4F13B2E63EBBCF7CB3FB482"
+    },
+    {
+      "record": "122",
+      "subject_cluster": "subject_122",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "B43CA64ED2C6E69D15DEF2C30F8CB2CBF25CB807F9530B1E7D5CFED2FD496F70",
+      "signal_sha256": "A700C794BFE23565603D75DC5706915F5436E522802D260E758683D11F5B9E13"
+    },
+    {
+      "record": "123",
+      "subject_cluster": "subject_123",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V5"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "AAB5351E9DA6F4BEB22392F1A469DF4A9E4B8017FEA820432CF7D1846244D094",
+      "signal_sha256": "8A685A846B82D72AAC4DD86171AD0FE5B19C0BD9CE51DDC1E6F015F73B2D8C3A"
+    },
+    {
+      "record": "124",
+      "subject_cluster": "subject_124",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V4"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "2200F917FE7A1FA817B79069A274D3291A6FA66289521AF5E7D38EDEB3E82BCE",
+      "signal_sha256": "296988E49D2653EB499AD0B17C46826B4296B7EAF94DF3F76F1BA2DCDF6BC48B"
+    },
+    {
+      "record": "200",
+      "subject_cluster": "subject_200",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "9E0C2FF5B790CF624DEAB0CCB8A9F211A9E29A748D8197DA3C1EE7C5B596B40C",
+      "signal_sha256": "A9E203B3807B9FCD3647CDE03444437CB8EEC7F5128A8EB413EDAFB394272E0F"
+    },
+    {
+      "record": "201",
+      "subject_cluster": "subject_201_202",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "DBA34D6252879AF28C1D10CDE200989A4F6507D98DF4395F5CBA5F81AF5B7E5A",
+      "signal_sha256": "16610AE46EFF900794597503D15AF4572A8B1518F18DBED2843B7E68C81F3898"
+    },
+    {
+      "record": "202",
+      "subject_cluster": "subject_201_202",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "6822216D1BC51F7014637C53E543CDC3863FEA4EE3FEC3AA99FB0762AECE0CBA",
+      "signal_sha256": "0C990E4142DE6BE898DE4B21BD6E6705CD567E5D97CB731A994DC5AEE9C7142D"
+    },
+    {
+      "record": "203",
+      "subject_cluster": "subject_203",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "25B3A3107DD00221B245EF5C23FFDFBD07CAAF58E2CF377734F3A947361B26A5",
+      "signal_sha256": "5BA7D2237FC838438EFD8BB0A3BAEFFC5DE2E70C76E3AB7E401E811AD82F43E0"
+    },
+    {
+      "record": "205",
+      "subject_cluster": "subject_205",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "739F76BBCBBFDAD1F260A043A5F7106F6E912894065B15EA75BEE42AF0380A2A",
+      "signal_sha256": "8A513C39E6D9A1D732DE0B3909A87AA1FCFD4BD55AB5F59A5B810967D252AF36"
+    },
+    {
+      "record": "207",
+      "subject_cluster": "subject_207",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "7645D488D4C304760AAE0A709193FFA13692C317B551BCBDCBB37011032178D8",
+      "signal_sha256": "139F99250366FBF347CBA4D8EA1FBE788F98CB1B93B70F50CCBA70122D908605"
+    },
+    {
+      "record": "208",
+      "subject_cluster": "subject_208",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "5A27EFDA1BEA972440A0B5F40A1C322898693E9602D5CE4722FE750B7DEA46E9",
+      "signal_sha256": "22873623623C44EE413A5B60CACB15D4AF2723734836FB3AE45D9FF96BDB36E7"
+    },
+    {
+      "record": "209",
+      "subject_cluster": "subject_209",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "9AC1ABEDC17F898BF6A1DB9C64C38CCF4F065EBC3989EE7740F4C0796655E590",
+      "signal_sha256": "E2516DD126EA85529D9A0E8442FEF5D880A492D41F0692A76E648C8437F15C5F"
+    },
+    {
+      "record": "210",
+      "subject_cluster": "subject_210",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "9D6A422834435FB8D267256F4FD01BFD8158B511F662C4B5DD8C60059944A322",
+      "signal_sha256": "76E971FBA03C0AE2AB261C7446240987ECDE82F45DAD1D4F36E290B950EB464B"
+    },
+    {
+      "record": "212",
+      "subject_cluster": "subject_212",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "F67D7C99A8BA055941E8AA98FD1F31DFD7DD1D957C85F40B488237EECBA61AAD",
+      "signal_sha256": "6B63D3E20C40073BE852E8121196D5DE2EDE502168FCB6C10CA5AF841418CC5C"
+    },
+    {
+      "record": "213",
+      "subject_cluster": "subject_213",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "6B64B05C7A28630ACF3FFB5E541D635E3FC854EA3602B1B355762F94C6058F17",
+      "signal_sha256": "0CB13CD9299B0AB68F8F3064B2AB72F853D155ABB277B68DAEF0A26CBC173B0D"
+    },
+    {
+      "record": "214",
+      "subject_cluster": "subject_214",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "BEB6B379E93CBE94EB9F1461CCCAA0131940E14322DF4ABBC07665B722ED9206",
+      "signal_sha256": "A886B1CEB56E950858DEDF5B56D3FDB5F26AEF3667F8EFFCB880C1C000EE0CD3"
+    },
+    {
+      "record": "215",
+      "subject_cluster": "subject_215",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "A326C25698A0773A6BE986F2CAE499981224D3C61D8FDCDDFBB3BEAF3FF0BCBD",
+      "signal_sha256": "9E28799B5733A2D60470653E6F6CA26610143303233A1B7559CFF54E2AD26EF9"
+    },
+    {
+      "record": "217",
+      "subject_cluster": "subject_217",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "5320A16D3A7D1DEA32CDF905B7F5140772A01BF6B11065E0AB937CC6775C5CE6",
+      "signal_sha256": "DE29975A2A476EAA1A3F07B90134CEC70830B2D7932B213354BA175914A6040A"
+    },
+    {
+      "record": "219",
+      "subject_cluster": "subject_219",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "D14F0FFBF19F9842DBAA15F82BCEDBC7B9B96F00F422B7E4DA31112A1D1B2B67",
+      "signal_sha256": "7FC27B77E313AAA40DA9F39783F8FB29A6A910BE148E67463E5093793644751A"
+    },
+    {
+      "record": "220",
+      "subject_cluster": "subject_220",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "AF40ADC6DEB9C0E942432E69A7153E41AC252EB6C15A24A715EF258469CDA2E5",
+      "signal_sha256": "C01CA1A76FB3A89E96134A08F2E5AA6E760EDA59EA9086BA8AAA13BA0CCA9CFF"
+    },
+    {
+      "record": "221",
+      "subject_cluster": "subject_221",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "09AFD18974EE6E0CFA8B5B6CE80112C4DF0CFBB8C8D01D3D085ECDF7790ADA7B",
+      "signal_sha256": "274D17C6A35F7ADCBB10A59EA34350E5AD299C2D69E4FA579D8863213E1FE9AE"
+    },
+    {
+      "record": "222",
+      "subject_cluster": "subject_222",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "A395BF5E58492E6724616532AAE1CCA7C50626FD66FE61F843A92ADADC27293D",
+      "signal_sha256": "0510BF39ED2925A83DEBD249492BDFE77C575148376AAABEBA4C7B7A2451AC5D"
+    },
+    {
+      "record": "223",
+      "subject_cluster": "subject_223",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "BBD414E57B6EAFA53204FB7EEB1212C9D47F598F36E8838B103BFB68A316CA85",
+      "signal_sha256": "1D42AA9E13F7349287AE5F0F00B40078C01AADD39E2CAD1001AB42D3B7484594"
+    },
+    {
+      "record": "228",
+      "subject_cluster": "subject_228",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "B4A2796CA39816B32D5B24C2C1D0A2AA355D159AAFD7ECBFB1CDF11A695A14D8",
+      "signal_sha256": "B2421F15447772BB7A38F5073E4E07D5D9BE50D875441A4A0821C9E22B78FDAC"
+    },
+    {
+      "record": "230",
+      "subject_cluster": "subject_230",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "5738BB479316DCC324B27807BBBFFD8878DA6156707C6CFBC08DCD0FA4771671",
+      "signal_sha256": "FBA09EA54D9CAA342C54C46E0DF247335345B02444F7D15162906ADFEF55D057"
+    },
+    {
+      "record": "231",
+      "subject_cluster": "subject_231",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "733195A792E806A897531475EABCDEC71E96F7B6CD7BCF57F9F1B2538CB13503",
+      "signal_sha256": "7D4F56D6C4B1D50322154381C1D8761457C2F2696973E915A3C19D8A5B789595"
+    },
+    {
+      "record": "232",
+      "subject_cluster": "subject_232",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "5FF480450238FFC957ABDE76687B7E3D728C4B7B19063C8A0B1D08469A2228EA",
+      "signal_sha256": "3D74A21F848766C9607BC5EEAD7E4B2655F09586ADB5561F02FD8FCB0E9DA6D0"
+    },
+    {
+      "record": "233",
+      "subject_cluster": "subject_233",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "D5EF73B3B4A98BEC6E3D853DB08FF18B0A1A9173C95327BCB15B2CFECEE99B85",
+      "signal_sha256": "6CCD6B1FA0CAFC052369E7EC0A99CC6C3B56B3C12AFFF26DB800C55A826211B4"
+    },
+    {
+      "record": "234",
+      "subject_cluster": "subject_234",
+      "sample_rate_hz": 360,
+      "sample_count": 650000,
+      "channel_count": 2,
+      "available_leads": [
+        "MLII",
+        "V1"
+      ],
+      "selected_channel_zero_based": 0,
+      "selected_lead": "MLII",
+      "selection_reason": "MLII preferred",
+      "gain_adc_units_per_mv": 200.0,
+      "adc_zero": 1024.0,
+      "segments": [
+        {
+          "segment_index": 0,
+          "start_seconds": 300,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 1,
+          "start_seconds": 900,
+          "duration_seconds": 8
+        },
+        {
+          "segment_index": 2,
+          "start_seconds": 1500,
+          "duration_seconds": 8
+        }
+      ],
+      "header_sha256": "91C94C803D05F637CC29A3F353D88E1C25B20A25957C8CC25F7CBBF9FE2627C9",
+      "signal_sha256": "89F826307BFC91A554021DA87C17B88B843ED3D26AA9EA237FC6F7C8AF00DA6D"
+    }
+  ]
+}

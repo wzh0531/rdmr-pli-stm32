@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS_COMPARABLE_PAIR",
+  "comparison_scope": "same Rev17 implementation 0.4.1, board class, F4 input, PLI 0.20, no added noise, seed 1000 and 32-point search; A3 scheduled search versus A2 full-rate search",
+  "A3": {
+    "scenario_id": 804,
+    "state_block_counts": {"0": 19, "1": 35, "2": 106},
+    "tracker_calls": 35,
+    "tracker_searches": 34,
+    "grid_evaluations": 1088,
+    "block_cycles_mean": 595206,
+    "block_cycles_p95": 2758248,
+    "block_cycles_max": 2775151,
+    "block_deadline_violations": 0,
+    "output_snr_db": 20.073059758354475
+  },
+  "A2": {
+    "scenario_id": 807,
+    "state_block_counts": {"0": 160, "1": 0, "2": 0},
+    "tracker_calls": 160,
+    "tracker_searches": 159,
+    "grid_evaluations": 5088,
+    "block_cycles_mean": 2688587,
+    "block_cycles_p95": 2768252,
+    "block_cycles_max": 2776280,
+    "block_deadline_violations": 0,
+    "output_snr_db": 21.539334969741198
+  },
+  "A3_minus_A2": {
+    "output_snr_db": -1.466275211386723,
+    "search_reduction_percent": 78.6163522012579,
+    "grid_evaluation_reduction_percent": 78.6163522012579,
+    "mean_block_cycle_reduction_percent": 77.8617541481827,
+    "p95_block_cycle_reduction_percent": 0.361383284469763,
+    "maximum_block_cycle_reduction_percent": 0.0406659270678733,
+    "A3_mean_hard_budget_utilization_percent": 16.5335,
+    "A2_mean_hard_budget_utilization_percent": 74.6829722222222
+  },
+  "bounded_conclusion": "For this frozen F4 condition, A3 reduced search evaluations and mean block cycles by about 78% relative to A2, while losing 1.466 dB output SNR. Both met the 20%-margin maximum-block target. The scheduler therefore changes average compute-quality trade-off rather than the per-search worst-case latency."
+}

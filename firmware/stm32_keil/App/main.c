@@ -238,6 +238,14 @@ static void emit_config(const rdmr_experiment_config_t *config)
     uart1_u32(config->sample_count);
     uart1_puts(",block_size=");
     uart1_u32(RDMR_BLOCK_SIZE);
+    uart1_puts(",tracker_search_mode=");
+    uart1_u32(RDMR_TRACKER_SEARCH_MODE);
+    uart1_puts(",tracker_grid_points_max=");
+#if RDMR_TRACKER_SEARCH_MODE == RDMR_TRACKER_SEARCH_HIERARCHICAL
+    uart1_u32(RDMR_TRACKER_HIERARCHICAL_MAX_EVAL);
+#else
+    uart1_u32(RDMR_GRID_SIZE);
+#endif
     uart1_puts(",pli_amplitude_u6=");
     uart1_u32(
         (uint32_t)(config->pli_amplitude * RDMR_VALUE_SCALE)
@@ -247,7 +255,8 @@ static void emit_config(const rdmr_experiment_config_t *config)
 
 static uint32_t emit_record(
     const rdmr_log_record_t *record,
-    const rdmr_cycle_summary_t *block_cycles
+    const rdmr_cycle_summary_t *block_cycles,
+    uint32_t block_cycles_total
 )
 {
     rdmr_algorithm_telemetry_t telemetry;
@@ -349,9 +358,15 @@ static uint32_t emit_record(
     uart1_putc(',');
     uart1_u32(telemetry.tracker_calls);
     uart1_putc(',');
+    uart1_u32(telemetry.tracker_searches);
+    uart1_putc(',');
+    uart1_u32(telemetry.tracker_grid_evaluations);
+    uart1_putc(',');
     uart1_u32((uint32_t)telemetry.state_next);
     uart1_putc(',');
     uart1_u32(block_cycles->maximum);
+    uart1_putc(',');
+    uart1_u32(block_cycles_total);
     uart1_putc(',');
     uart1_u32(block_cycles->mean);
     uart1_putc(',');
@@ -372,6 +387,7 @@ static uint32_t emit_record(
 
 static void emit_stats(
     const rdmr_cycle_summary_t *all_cycles,
+    const rdmr_cycle_summary_t *block_total_cycles,
     const rdmr_cycle_summary_t *tracker_cycles,
     uint32_t data_rows,
     uint32_t numeric_faults
@@ -393,6 +409,20 @@ static void emit_stats(
     uart1_u32(all_cycles->deadline_cycles);
     uart1_puts(",deadline_violations=");
     uart1_u32(all_cycles->deadline_violations);
+    uart1_puts(",block_total_count=");
+    uart1_u32(block_total_cycles->count);
+    uart1_puts(",block_total_mean=");
+    uart1_u32(block_total_cycles->mean);
+    uart1_puts(",block_total_median=");
+    uart1_u32(block_total_cycles->median);
+    uart1_puts(",block_total_p95=");
+    uart1_u32(block_total_cycles->p95);
+    uart1_puts(",block_total_max=");
+    uart1_u32(block_total_cycles->maximum);
+    uart1_puts(",block_deadline_cycles=");
+    uart1_u32(block_total_cycles->deadline_cycles);
+    uart1_puts(",block_deadline_violations=");
+    uart1_u32(block_total_cycles->deadline_violations);
     uart1_puts(",tracker_cycle_count=");
     uart1_u32(tracker_cycles->count);
     uart1_puts(",tracker_cycles_mean=");
@@ -403,6 +433,14 @@ static void emit_stats(
     uart1_u32(tracker_cycles->p95);
     uart1_puts(",tracker_cycles_max=");
     uart1_u32(tracker_cycles->maximum);
+    {
+        rdmr_algorithm_telemetry_t telemetry;
+        rdmr_algorithm_get_telemetry(&canceller, &telemetry);
+        uart1_puts(",tracker_searches=");
+        uart1_u32(telemetry.tracker_searches);
+        uart1_puts(",tracker_grid_evaluations=");
+        uart1_u32(telemetry.tracker_grid_evaluations);
+    }
     uart1_puts(",numeric_faults=");
     uart1_u32(numeric_faults);
     uart1_puts("\r\n");
@@ -417,15 +455,25 @@ static void run_internal_demo(void)
     rdmr_signal_sample_t signal_sample;
     rdmr_cycle_stats_t all_cycle_stats;
     rdmr_cycle_stats_t block_cycle_stats;
+    rdmr_cycle_stats_t block_total_cycle_stats;
     rdmr_cycle_stats_t tracker_cycle_stats;
     rdmr_cycle_summary_t all_cycle_summary;
     rdmr_cycle_summary_t block_cycle_summary;
+    rdmr_cycle_summary_t block_total_cycle_summary;
     rdmr_cycle_summary_t tracker_cycle_summary;
     rdmr_log_record_t record;
     uint32_t sample_index;
     uint32_t data_rows = 0U;
     uint32_t numeric_faults = 0U;
-    const uint32_t deadline_cycles = SystemCoreClock / 1000U;
+    uint32_t block_cycles_total = 0U;
+    /*
+     * Use the protocol-bound 72 MHz target clock for evidence metadata.
+     * DWT still measures the actual elapsed core cycles.  Keeping the
+     * acceptance budgets independent of mutable CMSIS clock state prevents
+     * a valid timing run from reporting a zero deadline.
+     */
+    const uint32_t deadline_cycles = RDMR_SAMPLE_DEADLINE_CYCLES;
+    const uint32_t block_deadline_cycles = RDMR_BLOCK_DEADLINE_CYCLES;
 
     config.algorithm_id =
         (rdmr_algorithm_id_t)RDMR_DEMO_ALGORITHM;
@@ -555,6 +603,10 @@ static void run_internal_demo(void)
 #endif
     rdmr_cycle_stats_init(&all_cycle_stats, deadline_cycles);
     rdmr_cycle_stats_init(&block_cycle_stats, deadline_cycles);
+    rdmr_cycle_stats_init(
+        &block_total_cycle_stats,
+        block_deadline_cycles
+    );
     rdmr_cycle_stats_init(&tracker_cycle_stats, deadline_cycles);
     if (rdmr_algorithm_init(&canceller, config.algorithm_id) == 0) {
         uart1_puts("ERROR,algorithm_initialization_failed\r\n");
@@ -662,6 +714,7 @@ static void run_internal_demo(void)
         }
 #endif
         rdmr_cycle_stats_update(&block_cycle_stats, elapsed_cycles);
+        block_cycles_total += elapsed_cycles;
 #if RDMR_EMIT_INIT_DIAGNOSTICS
         if (sample_number == 1U) {
             emit_trace(sample_number, "block_stats", elapsed_cycles);
@@ -688,11 +741,19 @@ static void run_internal_demo(void)
             record.clean = signal_sample.clean;
             record.true_frequency_hz = signal_sample.true_frequency_hz;
             rdmr_cycle_stats_get(&block_cycle_stats, &block_cycle_summary);
+            rdmr_cycle_stats_update(
+                &block_total_cycle_stats,
+                block_cycles_total
+            );
 #if RDMR_EMIT_INIT_DIAGNOSTICS
             emit_trace(sample_number, "block_summary", elapsed_cycles);
 #endif
             if (
-                emit_record(&record, &block_cycle_summary) != 0U
+                emit_record(
+                    &record,
+                    &block_cycle_summary,
+                    block_cycles_total
+                ) != 0U
             ) {
                 numeric_faults += 1U;
             }
@@ -703,14 +764,20 @@ static void run_internal_demo(void)
             record.desired_energy = 0.0f;
             record.input_error_energy = 0.0f;
             record.output_error_energy = 0.0f;
+            block_cycles_total = 0U;
             rdmr_cycle_stats_init(&block_cycle_stats, deadline_cycles);
         }
     }
 
     rdmr_cycle_stats_get(&all_cycle_stats, &all_cycle_summary);
+    rdmr_cycle_stats_get(
+        &block_total_cycle_stats,
+        &block_total_cycle_summary
+    );
     rdmr_cycle_stats_get(&tracker_cycle_stats, &tracker_cycle_summary);
     emit_stats(
         &all_cycle_summary,
+        &block_total_cycle_summary,
         &tracker_cycle_summary,
         data_rows,
         numeric_faults

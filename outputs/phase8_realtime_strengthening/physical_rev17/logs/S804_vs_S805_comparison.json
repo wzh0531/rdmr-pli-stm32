@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS_COMPARABLE_PAIR",
+  "comparison_scope": "same STM32F103 board class, Rev17 implementation 0.4.1, A3, F4, PLI 0.20, no added noise, seed 1000; search mode differs only",
+  "hierarchical": {
+    "scenario_id": 804,
+    "points_per_search": 32,
+    "grid_evaluations": 1088,
+    "block_cycles_mean": 595206,
+    "block_cycles_p95": 2758248,
+    "block_cycles_max": 2775151,
+    "block_deadline_violations": 0,
+    "output_snr_db": 20.073059758354475
+  },
+  "exhaustive": {
+    "scenario_id": 805,
+    "points_per_search": 201,
+    "grid_evaluations": 6834,
+    "block_cycles_mean": 3416318,
+    "block_cycles_p95": 16922784,
+    "block_cycles_max": 17034581,
+    "block_deadline_violations": 34,
+    "output_snr_db": 20.073059758354475
+  },
+  "paired_effect": {
+    "grid_evaluation_reduction_percent": 84.0796019900498,
+    "mean_block_cycle_reduction_percent": 82.5775586464726,
+    "p95_block_cycle_reduction_percent": 83.7009796969577,
+    "maximum_block_cycle_reduction_percent": 83.7087216879593,
+    "maximum_block_speedup": 6.13825373826505,
+    "exhaustive_maximum_block_ms_at_72mhz": 236.591402777778,
+    "hierarchical_maximum_block_ms_at_72mhz": 38.5437638888889,
+    "output_snr_difference_db": 0.0
+  },
+  "bounded_conclusion": "For this frozen internal-signal condition, the 32-point search changes the A3 maximum 50 ms block from a hard-budget failure to a 20%-margin pass without changing the logged output SNR. This does not establish ADC/DMA end-to-end real-time operation."
+}

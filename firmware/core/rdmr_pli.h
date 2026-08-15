@@ -37,10 +37,27 @@ extern "C" {
 #define RDMR_TRACKER_MIN_SAMPLES   100U
 #define RDMR_GRID_SIZE             201U
 
+#define RDMR_TRACKER_SEARCH_EXHAUSTIVE    0U
+#define RDMR_TRACKER_SEARCH_HIERARCHICAL  1U
+
+#ifndef RDMR_TRACKER_SEARCH_MODE
+#define RDMR_TRACKER_SEARCH_MODE RDMR_TRACKER_SEARCH_EXHAUSTIVE
+#endif
+
+#define RDMR_TRACKER_COARSE_STRIDE          10U
+#define RDMR_TRACKER_COARSE_POINTS          21U
+#define RDMR_TRACKER_FINE_POINTS            11U
+#define RDMR_TRACKER_FINE_RADIUS             5U
+#define RDMR_TRACKER_HIERARCHICAL_MAX_EVAL  32U
+
 typedef enum {
     RDMR_MODE_FIXED_REFERENCE = 0,
     RDMR_MODE_FULL_RATE = 1,
-    RDMR_MODE_RESIDUAL_MULTIRATE = 2
+    RDMR_MODE_RESIDUAL_MULTIRATE = 2,
+    RDMR_MODE_FIXED_INTERVAL_3 = 3,
+    RDMR_MODE_FIXED_INTERVAL_12 = 4,
+    RDMR_MODE_FIXED_INTERVAL_4 = 5,
+    RDMR_MODE_TWO_STATE_RESIDUAL = 6
 } rdmr_mode_t;
 
 typedef enum {
@@ -72,6 +89,8 @@ typedef struct {
     uint16_t blocks_since_tracker;
     uint16_t low_count;
     uint32_t tracker_calls;
+    uint32_t tracker_searches;
+    uint32_t tracker_grid_evaluations;
     rdmr_mode_t mode;
     rdmr_state_t state;
     rdmr_state_t last_state_used;
@@ -82,6 +101,8 @@ typedef struct {
     float frequency_next_hz;
     float residual_ratio;
     uint32_t tracker_calls;
+    uint32_t tracker_searches;
+    uint32_t tracker_grid_evaluations;
     rdmr_state_t state_used;
     rdmr_state_t state_next;
 } rdmr_telemetry_t;

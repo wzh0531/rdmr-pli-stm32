@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PHASE8_LOCAL_REVISION_AND_REVIEWER_AUDIT_COMPLETED",
+  "protocol": "rdmr-pli-realtime-strengthening-v0.5.0",
+  "host_search_bridge": {
+    "paired_mode_comparisons": 4860,
+    "mean_grid_evaluation_reduction_percent": 84.08006996177256,
+    "mean_output_snr_difference_db": 0.000011822144917495943,
+    "minimum_individual_output_snr_difference_db": -0.016311776563693314,
+    "maximum_frequency_mae_increment_hz": 0.002547311782836917,
+    "frozen_exhaustive_regression_mismatches": 0,
+    "status": "PASS"
+  },
+  "mitdb_multirecord": {
+    "records": 48,
+    "subject_clusters": 47,
+    "paired_inputs": 3456,
+    "algorithm_runs": 10368,
+    "A3_minus_B4_mean_output_snr_db": 0.017011483571077828,
+    "A3_minus_B4_subject_cluster_bootstrap_ci95_db": [0.011528652977638186, 0.02274542714606381],
+    "interpretation_boundary": "controlled PLI injection on public ECG morphology; not clinical, acquisition-chain, or independent-condition validation",
+    "status": "PASS"
+  },
+  "stm32_rev17": {
+    "raw_log_count": 17,
+    "structural_pass_count": 17,
+    "target_timing_pass_count": 14,
+    "intentional_exhaustive_baseline_hard_fail_count": 3,
+    "hierarchical_max_cycle_range_observed": [2764456, 2786472],
+    "hierarchical_all_below_target_2880000": true,
+    "A3_exhaustive_to_hierarchical_max_cycle_reduction_percent": 83.7087216879593,
+    "A3_exhaustive_to_hierarchical_max_speedup": 6.13825373826505,
+    "F4_P020_A3_minus_B4_output_snr_db": 0.24364066777256,
+    "F4_P100_A3_minus_B4_output_snr_db": 0.025202237762955,
+    "F0_P020_unfavorable_A3_minus_B4_output_snr_db": -0.296457699082653,
+    "scope_boundary": "internal generated signals and DWT compute timing; ADC/DMA end-to-end streaming, power, and clinical validation remain NOT_CHECKED"
+  },
+  "protocol_deviation": {
+    "description": "The larger v0.5.0 physical matrix was adaptively reduced after four firmware images each produced byte-identical triplicate captures. Five information-bearing boundary images were selected from the frozen host matrix before their physical execution.",
+    "impact": "The boundary runs support worst-activity and counterexample checks but do not estimate population frequencies or replace random sampling."
+  },
+  "formal_runtime_status": "Historical prerequisites were recovered through runtime-managed review-protocol, search-provenance, and evidence-synthesis units. Quantitative audit completed at state version 192; science drafting completed at version 196; the Phase 8 reviewer audit completed at version 202 with science PASS_WITH_CONDITIONS, language PASS, and mechanics PASS. The v1.5.0 DOCX passed structural, accessibility, field, geometry, render-comparison, and 17-page visual inspection."
+}
